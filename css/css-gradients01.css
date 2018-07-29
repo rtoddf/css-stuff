@@ -1,0 +1,47 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+div {
+	display: block;
+	width: 250px;
+	height: 250px;
+	margin: 20px;
+	float: left;
+	border-radius: 50%;
+}
+
+.gradient {
+	background-image: radial-gradient(yellow, #f06d06);
+}
+
+.gradient.one {
+	background-image: radial-gradient(circle, yellow, #f06d06);
+}
+
+.gradient.two {
+	background-image: radial-gradient(circle closest-side, yellow, #f06d06);
+}
+
+.gradient.three {
+	background-image: radial-gradient(circle at top right, yellow, #f06d06);
+}
+
+
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/repeating-radial-gradient */
+.gradient.repeat {
+	background: repeating-radial-gradient(circle closest-side, orange, yellow 10%, orange 25%, orange 30%);
+}
+
+
+
+

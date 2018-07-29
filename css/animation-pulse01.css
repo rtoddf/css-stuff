@@ -1,0 +1,83 @@
+html {
+	background: #333;
+	overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+.flex-container {
+	width: 80%;
+	margin: 40px auto;
+}
+
+.flex-row {
+	display: flex;
+	width: 100%;
+}
+
+.flex-item {
+	flex: 1 1 20px;
+	justify-content: space-between;
+	height: 225px;
+	padding: 40px;
+}
+
+.flex-item .circle {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	cursor: pointer;
+	background: #333;
+	/* name duration delay timing-function iteration-count */
+	/* these are also available - direction | fill-mode | play-state */
+	animation: pulse 2.5s 0s ease-out infinite;
+	// transition: all 0.2s;
+}
+
+.flex-item .circle:hover {
+	animation: pulse-hover 0.5s 0s ease-out infinite;
+}
+
+.flex-item:nth-child(3) .circle,
+.flex-item:nth-child(5) .circle {
+	animation-delay: 0.25s;
+}
+
+.flex-item:nth-child(2) .circle,
+.flex-item:nth-child(6) .circle {
+	animation-delay: 0.5s;
+}
+
+.flex-item:nth-child(1) .circle,
+.flex-item:nth-child(7) .circle {
+	animation-delay: 0.75s;
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 8px 6px rgba(255, 135, 0, 0), 0 0 0px 0px #333, 0 0 0px 0px rgba(255, 135, 0, 0);
+	}
+	10% {
+		box-shadow: 0 0 8px 6px #fc8403, 0 0 12px 10px #333, 0 0 12px 14px #fc8403;
+	}
+	100% {
+		box-shadow: 0 0 8px 6px rgba(255, 135, 0, 0), 0 0 0px 40px #333, 0 0 0px 40px rgba(255, 135, 0, 0);
+	}
+}
+
+@keyframes pulse-hover {
+	from {
+		box-shadow: 0 0 8px 6px #fff, 0 0 12px 10px #333, 0 0 12px 14px #fff;
+	}
+	to {
+		box-shadow: 0 0 8px 6px rgba(255, 255, 255, 0), 0 0 4px 40px #333, 0 0 4px 41px rgba(255, 255, 255, 0);
+	}
+}

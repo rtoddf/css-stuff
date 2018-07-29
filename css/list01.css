@@ -1,0 +1,101 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+	color: #222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 20px;
+}
+
+p {
+	padding: 0 0 10px;
+}
+
+a {
+	color: #222;
+	transition: color .3s ease;
+}
+
+a:hover {
+	color: #666;
+	text-decoration: none;
+}
+
+
+/* flexbox */
+.flex-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flex-row {
+    display: flex;
+}
+
+@media (max-width: 480px) {
+	.flex-row {
+	    flex-direction: column;
+	}
+}
+
+.flex-item {
+    flex: 1 1 0;
+    position: relative;
+    margin: 20px 0 20px 20px;
+}
+
+.flex-row[data-margin="0"] .flex-item,
+.flex-row[data-margin="0"] .flex-item:last-child {
+    margin: 0;
+}
+
+div[data-layout="column"] {
+    display: flex;
+    flex-direction: column;
+}
+
+/* all evenly distributed cols */
+.flex-row .flex-item {
+    flex: 1 1 0;
+    position: relative;
+    margin: 20px 0 20px 20px;
+}
+
+.flex-row .flex-item:last-child {
+    margin-right: 20px;
+}
+
+.flex-item .flex-row .flex-item {
+    margin-top: 0;
+}
+
+
+.flex-item[data-weight="2"]{
+    flex: 2 2 40px;
+}
+
+.flex-item[data-weight="3"]{
+    flex: 3 3 40px;
+}
+
+.flex-item[data-weight="4"]{
+    flex: 4 4 40px;
+}
+
+
+
+ul {
+	border: 1px solid red;
+	list-style-position: inside;
+}

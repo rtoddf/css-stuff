@@ -1,0 +1,160 @@
+/* https://codepen.io/Raphael/pen/fqweF */
+
+html {
+	background: #333;
+	overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+#c {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -260px;
+}
+
+.s {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+	float: left;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.s:nth-child(n+2) {
+	margin-left: 80px;
+}
+
+.s:nth-child(1) {
+	background: #33ffbb;
+	/* name duration delay timing-function iteration-count */
+	/* these are also available - direction | fill-mode | play-state */
+	animation: r1 2s 0s ease-out infinite;
+}
+
+.s:nth-child(1):hover {
+	background: #ff3333;
+	animation: r20 0.5s 0.4s ease-out infinite;
+}
+
+.s:nth-child(2) {
+	background: #33ffdd;
+	animation: r2 2s 0.25s ease-out infinite;
+}
+
+.s:nth-child(3) {
+	background: #33ffff;
+	animation: r3 2s 0.5s ease-out infinite;
+}
+
+.s:nth-child(4) {
+	background: #33ddff;
+	animation: r4 2s 0.75s ease-out infinite;
+}
+
+.s:nth-child(5) {
+	background: #33bbff;
+	animation: r5 2s 1s ease-out infinite;
+}
+
+.s:nth-child(6) {
+	background: #3399ff;
+	animation: r6 2s 1.25s ease-out infinite;
+}
+
+.s:nth-child(6):hover {
+	background: #ff9933;
+	animation: r26 0.5s 0.4s ease-out infinite;
+}
+
+@keyframes r1 {
+	0% {
+		box-shadow: 0 0 8px 6px rgba(26, 255, 179, 0), 0 0 0px 0px #333, 0 0 0px 0px rgba(26, 255, 179, 0);
+	}
+	10% {
+		box-shadow: 0 0 8px 6px #1affb3, 0 0 12px 10px #333, 0 0 12px 14px #1affb3;
+	}
+	100% {
+		box-shadow: 0 0 8px 6px rgba(26, 255, 179, 0), 0 0 0px 40px #333, 0 0 0px 40px rgba(26, 255, 179, 0);
+	}
+}
+
+@keyframes r2 {
+	0% {
+		box-shadow: 0 0 8px 6px rgba(26, 255, 217, 0), 0 0 0px 0px #333, 0 0 0px 0px rgba(26, 255, 217, 0);
+	}
+	10% {
+		box-shadow: 0 0 8px 6px #1affd9, 0 0 12px 10px #333, 0 0 12px 14px #1affd9;
+	}
+	100% {
+		box-shadow: 0 0 8px 6px rgba(26, 255, 217, 0), 0 0 0px 40px #333, 0 0 0px 40px rgba(26, 255, 217, 0);
+	}
+}
+
+@keyframes r3 {
+	0% {
+		box-shadow: 0 0 8px 6px rgba(26, 255, 255, 0), 0 0 0px 0px #333, 0 0 0px 0px rgba(26, 255, 255, 0);
+	}
+	10% {
+		box-shadow: 0 0 8px 6px #1affff, 0 0 12px 10px #333, 0 0 12px 14px #1affff;
+	}
+	100% {
+		box-shadow: 0 0 8px 6px rgba(26, 255, 255, 0), 0 0 0px 40px #333, 0 0 0px 40px rgba(26, 255, 255, 0);
+	}
+}
+
+@keyframes r4 {
+	0% {
+		box-shadow: 0 0 8px 6px rgba(26, 217, 255, 0), 0 0 0px 0px #333, 0 0 0px 0px rgba(26, 217, 255, 0);
+	}
+	10% {
+		box-shadow: 0 0 8px 6px #1ad9ff, 0 0 12px 10px #333, 0 0 12px 14px #1ad9ff;
+	}
+	100% {
+		box-shadow: 0 0 8px 6px rgba(26, 217, 255, 0), 0 0 0px 40px #333, 0 0 0px 40px rgba(26, 217, 255, 0);
+	}
+}
+
+@keyframes r5 {
+	0% {
+		box-shadow: 0 0 8px 6px rgba(26, 179, 255, 0), 0 0 0px 0px #333, 0 0 0px 0px rgba(26, 179, 255, 0);
+	}
+	10% {
+		box-shadow: 0 0 8px 6px #1ab3ff, 0 0 12px 10px #333, 0 0 12px 14px #1ab3ff;
+	}
+	100% {
+		box-shadow: 0 0 8px 6px rgba(26, 179, 255, 0), 0 0 0px 40px #333, 0 0 0px 40px rgba(26, 179, 255, 0);
+	}
+}
+
+@keyframes r6 {
+	0% {
+		box-shadow: 0 0 8px 6px rgba(26, 140, 255, 0), 0 0 0px 0px #333, 0 0 0px 0px rgba(26, 140, 255, 0);
+	}
+	10% {
+		box-shadow: 0 0 8px 6px #1a8cff, 0 0 12px 10px #333, 0 0 12px 14px #1a8cff;
+	}
+	100% {
+		box-shadow: 0 0 8px 6px rgba(26, 140, 255, 0), 0 0 0px 40px #333, 0 0 0px 40px rgba(26, 140, 255, 0);
+	}
+}
+
+@keyframes r26 {
+	from {
+		box-shadow: 0 0 8px 6px #ff8c1a, 0 0 12px 10px #333, 0 0 12px 14px #ff8c1a;
+	}
+	to {
+		box-shadow: 0 0 8px 6px rgba(255, 140, 26, 0), 0 0 4px 40px #333, 0 0 4px 41px rgba(255, 140, 26, 0);
+	}
+}

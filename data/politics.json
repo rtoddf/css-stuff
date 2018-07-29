@@ -1,0 +1,345 @@
+[
+	{
+		"name": "Joe Biden",
+		"shortname": "joebiden",
+		"type": ["politics"],
+		"birthdate": "November 20, 1942",
+		"birthplace": "Scranton, PA",
+		"deceased": "",
+		"latlon": [33.9533487, -117.3961564],
+		"facts": ["Vice President & Advocate"],
+		"social": {
+			"facebook": "joebiden",
+			"twitter": "JoeBiden",
+			"instagram": "vp",
+			"instagram_id": 1267116472,
+			"youtube": "JoeBidendotcom",
+			"website": "http://www.whitehouse.gov/administration/vice-president-biden"
+		}
+	},
+	{
+		"name": "Mark Takano",
+		"shortname": "marktakano",
+		"type": ["politics"],
+		"birthdate": "December 10, 1960",
+		"birthplace": "Riverside, CA",
+		"deceased": "",
+		"latlon": [33.9533487, -117.3961564],
+		"facts": ["CA U.S. Representative"],
+		"social": {
+			"facebook": "RepMarkTakano",
+			"twitter": "RepMarkTakano",
+			"instagram": "RepMarkTakano",
+			"instagram_id": 278025202,
+			"youtube": "RepMarkTakano",
+			"website": "http://takano.house.gov/"
+		}
+	},
+	{
+		"name": "Peter Tatchell",
+		"shortname": "petertatchell",
+		"type": ["politics"],
+		"birthdate": "January 25, 1952",
+		"birthplace": "Melbourne, Australia",
+		"deceased": "",
+		"latlon": [-37.814107, 144.96328],
+		"facts": ["British Political Campaigner"],
+		"social": {
+			"facebook": "PeterTatchell",
+			"twitter": "PeterTatchell",
+			"instagram": "",
+			"instagram_id": 0,
+			"youtube": "TatchellPeter",
+			"website": "http://www.petertatchell.net/"
+		}
+	},
+	{
+		"name": "Krystian Legierski",
+		"shortname": "krystianlegierski",
+		"type": ["politics"],
+		"birthdate": "April 22, 1978",
+		"birthplace": "Koniakow, Poland",
+		"deceased": "",
+		"latlon": [49.550337, 18.949112],
+		"facts": ["Polish LGBT Activist & Advocate"],
+		"social": {
+			"facebook": "Krystian.Legierski",
+			"twitter": "",
+			"instagram": "",
+			"instagram_id": 0,
+			"youtube": "",
+			"website": ""
+		}
+	},
+	{
+		"name": "Barack Obama",
+		"shortname": "barackobama",
+		"type": ["politics"],
+		"birthdate": "August 4, 1961",
+		"birthplace": "Honolulu, HI",
+		"deceased": "",
+		"latlon": [21.306944, -157.858333],
+		"facts": ["US President & Advocate"],
+		"social": {
+			"facebook": "barackobama",
+			"twitter": "BarackObama",
+			"instagram": "BarackObama",
+			"instagram_id": 10206720,
+			"youtube": "",
+			"website": "http://www.barackobama.com/"
+		}
+	},
+	{
+		"name": "Mark Leno",
+		"shortname": "markleno",
+		"type": ["politics"],
+		"birthdate": "September 24, 1951",
+		"birthplace": "Milwaukee, WI",
+		"deceased": "",
+		"latlon": [43.038902, -87.906474],
+		"facts": ["California State Senator"],
+		"social": {
+			"facebook": "Mark.Leno.CA",
+			"twitter": "MarkLeno",
+			"instagram": "",
+			"instagram_id": 0,
+			"youtube": "",
+			"website": "http://sd11.senate.ca.gov/"
+		}
+	},
+	{
+		"name": "Barney Frank",
+		"shortname": "barneyfrank",
+		"type": ["politics"],
+		"birthdate": "March 31, 1940",
+		"birthplace": "Bayonne, NJ",
+		"deceased": "",
+		"latlon": [40.668714, -74.114309],
+		"facts": ["Former US House Member"],
+		"social": {
+			"facebook": "barneyfrank",
+			"twitter": "BarneyFrank",
+			"instagram": "",
+			"instagram_id": 0,
+			"youtube": "",
+			"website": ""
+		}
+	},
+	{
+		"name": "Sean Patrick Maloney",
+		"shortname": "seanpatrickmaloney",
+		"type": ["politics"],
+		"birthdate": "July 30, 1966",
+		"birthplace": "Sherbrooke, Quebec",
+		"deceased": "",
+		"latlon": [45.400993, -71.882429],
+		"facts": ["New York Senate Member"],
+		"social": {
+			"facebook": "maloneysp",
+			"twitter": "RepSeanMaloney",
+			"instagram": "",
+			"instagram_id": 0,
+			"youtube": "eldridgeforcongress",
+			"website": "http://seanmaloney.house.gov/"
+		}
+	},
+	{
+		"name": "Sean Eldridge",
+		"shortname": "seaneldridge",
+		"type": ["politics"],
+		"birthdate": "July 31, 1986",
+		"birthplace": "Canada",
+		"deceased": "",
+		"latlon": [56.130366, -106.346771],
+		"facts": ["Lorem ipsum dolor sit amet."],
+		"social": {
+			"facebook": "seaneldridge",
+			"twitter": "SeanEldridge",
+			"instagram": "",
+			"instagram_id": 0,
+			"youtube": "eldridgeforcongress",
+			"website": "http://seaneldridge.com/"
+		}
+	},
+	{
+		"name": "Tammy Baldwin",
+		"shortname": "tammybaldwin",
+		"type": ["politics"],
+		"birthdate": "February 11, 1962",
+		"birthplace": "Madison, WI",
+		"deceased": "",
+		"latlon": [43.073052, -89.40123],
+		"facts": ["Wisconsin Senate Member"],
+		"social": {
+			"facebook": "senatortammybaldwin",
+			"twitter": "tammybaldwin",
+			"instagram": "senbaldwinoffice",
+			"instagram_id": 461450533,
+			"youtube": "TammyBaldwinSenate",
+			"website": "http://www.baldwin.senate.gov/"
+		}
+	},
+	{
+		"name": "Chris Bryant",
+		"shortname": "chrisbryant",
+		"type": ["politics"],
+		"birthdate": "January 11, 1962",
+		"birthplace": "Cardiff, Wales",
+		"deceased": "",
+		"latlon": [51.481581, -3.17909],
+		"facts": ["Member of UK Parliament"],
+		"social": {
+			"facebook": "",
+			"twitter": "ChrisBryantMP",
+			"instagram": "",
+			"instagram_id": 0,
+			"youtube": "",
+			"website": "http://www.chris-bryant.co.uk/"
+		}
+	},
+	{
+		"name": "Michael Cashman",
+		"shortname": "michaelcashman",
+		"type": ["politics"],
+		"birthdate": "December 17, 1950",
+		"birthplace": "London, England",
+		"deceased": "",
+		"latlon": [51.508515, -0.125487],
+		"facts": ["Member of the European Parliament"],
+		"social": {
+			"facebook": "mcashmanMEP",
+			"twitter": "mcashmanMEP",
+			"instagram": "",
+			"instagram_id": 0,
+			"youtube": "",
+			"website": ""
+		}
+	},
+	{
+		"name": "Bertrand Delanoë",
+		"shortname": "bertranddelanoe",
+		"type": ["politics"],
+		"birthdate": "May 30, 1950",
+		"birthplace": "Tunis, Tunisia",
+		"deceased": "",
+		"latlon": [36.818810, 10.16596],
+		"facts": ["Mayor of Paris"],
+		"social": {
+			"facebook": "",
+			"twitter": "BertrandDelanoe",
+			"instagram": "",
+			"instagram_id": 0,
+			"youtube": "",
+			"website": "http://bertranddelanoe.net/"
+		}
+	},
+	{
+		"name": "Xavier Bettel",
+		"shortname": "xavierbettel",
+		"type": ["politics"],
+		"birthdate": "March 3, 1973",
+		"birthplace": "Luxembourg City, Luxembourg",
+		"deceased": "",
+		"latlon": [49.611621, 6.131935],
+		"facts": ["Prime Minister of Luxembourg"],
+		"social": {
+			"facebook": "xavierbettel",
+			"twitter": "Xavier_Bettel",
+			"instagram": "",
+			"instagram_id": 0,
+			"youtube": "",
+			"website": ""
+		}
+	},
+	{
+		"name": "Jared Schutz Polis",
+		"shortname": "jaredschutzpolis",
+		"type": ["politics"],
+		"birthdate": "May 12, 1975",
+		"birthplace": "Boulder, CO",
+		"deceased": "",
+		"latlon": [40.014986, -105.270546],
+		"facts": ["Colorado House Member"],
+		"social": {
+			"facebook": "polis",
+			"twitter": "jaredpolis",
+			"instagram": "",
+			"instagram_id": 0,
+			"youtube": "",
+			"website": "http://polis.house.gov/"
+		}
+	},
+	{
+		"name": "David Cicilline",
+		"shortname": "davidcicilline",
+		"type": ["politics"],
+		"birthdate": "July 15, 1961",
+		"birthplace": "Providence, RI",
+		"deceased": "",
+		"latlon": [41.823989, -71.412834],
+		"facts": ["Rhode Island House Member"],
+		"social": {
+			"facebook": "CongressmanDavidCicilline",
+			"twitter": "davidcicilline",
+			"instagram": "",
+			"instagram_id": 0,
+			"youtube": "",
+			"website": "http://cicilline.house.gov/"
+		}
+	},
+	{
+		"name": "Lupe Valdez",
+		"shortname": "lupezaldez",
+		"type": ["politics"],
+		"birthdate": "October 11, 1947",
+		"birthplace": "San Antonio, TX",
+		"deceased": "",
+		"latlon": [29.424122, -98.493628],
+		"facts": ["Sheriff of Dallas County, Texas"],
+		"social": {
+			"facebook": "SheriffLupe",
+			"twitter": "SheriffLupe",
+			"instagram": "",
+			"instagram_id": 0,
+			"youtube": "",
+			"website": "http://www.lupevaldez.com/"
+		}
+	},
+	{
+		"name": "Annise Parker",
+		"shortname": "anniseparker",
+		"type": ["politics"],
+		"birthdate": "May 17, 1956",
+		"birthplace": "Houston, TX",
+		"deceased": "",
+		"latlon": [29.760193, -95.36939],
+		"facts": ["Mayor of Houston"],
+		"social": {
+			"facebook": "MayorAnniseParker",
+			"twitter": "AnniseParker",
+			"instagram": "AnniseParker",
+			"instagram_id": 322092221,
+			"youtube": "Parker4Houston",
+			"website": "http://www.anniseparker.com/"
+		}
+		
+	},
+	{
+		"name": "Mark Pocan",
+		"shortname": "markpocan",
+		"type": ["politics"],
+		"birthdate": "August 14, 1964",
+		"birthplace": "Kenosha, WI",
+		"deceased": "",
+		"latlon": [42.584742, -87.821185],
+		"facts": ["Wisconsin House Member"],
+		"social": {
+			"facebook": "repmarkpocan",
+			"twitter": "MarkPocan",
+			"instagram": "",
+			"instagram_id": 0,
+			"youtube": "markpocan",
+			"website": "http://pocan.house.gov/"
+		}
+	}
+]
