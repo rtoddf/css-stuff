@@ -15,57 +15,70 @@ html {
 }
 
 article {
+	/* width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	cursor: pointer; */
+	border: 1px solid #fff;
+	align-self: center;
+	justify-self: center;
+	/* -webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s; */
+}
+
+article .dot {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	cursor: pointer;
-	align-self: center;
-	justify-self: center;
+	/* cursor: pointer; */
+	/* align-self: center;
+	justify-self: center; */
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;
 	transition: all 0.2s;
 }
 
-article:nth-child(1) {
+article:nth-child(1) .dot {
 	background: #33ffbb;
 	/* name duration delay timing-function iteration-count */
 	/* these are also available - direction | fill-mode | play-state */
 	animation: r1 2s 0s ease-out infinite;
 }
 
-article:nth-child(7) {
+article:nth-child(7) .dot {
 	background: #ff0;
 	/* name duration delay timing-function iteration-count */
 	/* these are also available - direction | fill-mode | play-state */
 	animation: r10 2s 0s ease-out infinite;
 }
 
-article:nth-child(2) {
+article:nth-child(2) .dot {
 	background: #33ffdd;
 	animation: r2 2s 0.25s ease-out infinite;
 }
 
-article:nth-child(3) {
+article:nth-child(3) .dot {
 	background: #33ffff;
 	animation: r3 2s 0.5s ease-out infinite;
 }
 
-article:nth-child(4) {
+article:nth-child(4) .dot {
 	background: #33ddff;
 	animation: r4 2s 0.75s ease-out infinite;
 }
 
-article:nth-child(5) {
+article:nth-child(5) .dot {
 	background: #33bbff;
 	animation: r5 2s 1s ease-out infinite;
 }
 
-article:nth-child(6) {
+article:nth-child(6) .dot {
 	background: #3399ff;
 	animation: r6 2s 1.25s ease-out infinite;
 }
 
-article:nth-child(12) {
+article:nth-child(12) .dot {
 	background: #ff9933;
 	animation: r60 2s 1.25s ease-out infinite;
 }
