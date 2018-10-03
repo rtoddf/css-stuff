@@ -1,5 +1,12 @@
+// https://www.kirupa.com/html5/storing_and_retrieving_an_array_from_local_storage.htm
+
 var cols;
 var widgetOrder = [];
+
+var retrievedData = localStorage.getItem("widgetOrder");
+var savedWidgetOrder = JSON.parse(retrievedData);
+
+console.log("savedWidgetOrder: ", savedWidgetOrder);
 
 $(document).ready(function(){
     cols = $('#columns .column'),
@@ -59,67 +66,20 @@ function handleDragEnd(e){
     })
 }
 
-// var mutationObserver = new MutationObserver(function(mutations) {
-//     mutations.forEach(function(mutation) {
-//         var target = mutation.target;
-//         console.log($(target).attr("data-id"));
-//     });
-// });
-
-// mutationObserver.observe(node, {
-//     attributes: true,
-//     characterData: true,
-//     childList: true,
-//     subtree: true,
-//     // attributeOldValue: true,
-//     // characterDataOldValue: true,
-//     attributeFilter: ['data-id']
-// });
-
-function callback(mutationList, observer) {
-    mutationList.forEach((mutation) => {
-        switch(mutation.type) {
-        case 'childList':
-            /* One or more children have been added to and/or removed
-                from the tree; see mutation.addedNodes and
-                mutation.removedNodes */
-            break;
-        case 'attributes':
-            /* An attribute value changed on the element in
-                mutation.target; the attribute name is in
-                mutation.attributeName and its previous value is in
-                mutation.oldValue */
-            break;
-        }
-        var target = mutation.target;
-        var children = $(target).parent().children()
-        console.log(children);
-    });
-}
-
-var targetNode = document.querySelector(".container");
-var observerOptions = {
-  childList: true,
-  attributes: true,
-  subtree: true //Omit or set to false to observe only changes to the parent node.
-}
-
-var observer = new MutationObserver(callback);
-observer.observe(targetNode, observerOptions);
-
 function saveState(){
     if (localStorage) {
-        // widgetOrder = [];
+        widgetOrder = [];
 
-        // $.each(cols, function(i, col){
-            
-        //     widgetOrder.push($(col).attr("data-id"));
-        // });
+        $("#columns").each(function(index, elem){
+            var something = $(elem).find("article div")
 
-        
+            $(something).each(function(i, j){
+                widgetOrder.push($(j).attr("data-id"));
+            })
+        });
 
-        console.log("we have local storage: ", widgetOrder);
-
+        console.log("widgetOrder: ", widgetOrder);
+        localStorage.setItem("widgetOrder", JSON.stringify(widgetOrder));
     }
 }
 
