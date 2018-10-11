@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>Interfaces - CSS</title>
+		<link href="../css/layout.css" rel="stylesheet" />
+		<link href="../css/learning/nth-child-01.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="container">
+            <h3>Select only the 3rd element</h3>
+            <div class="grid a" data-col="10">
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+            </div>
+<pre>article:nth-child(3) .dot {
+    background: #ae0000;
+}</pre>
+
+            <h3>Select all but the first 3</h3>
+            <div class="grid b" data-col="10">
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+            </div>
+<pre>article:nth-child(n+4) .dot {
+    background: #ae0000;
+}</pre>
+
+            <h3>Select only the first 3</h3>
+            <div class="grid c" data-col="10">
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+            </div>
+<pre>article:nth-child(-n+3) .dot {
+    background: #ae0000;
+}</pre>
+
+            <h3>Select every 3rd, starting at the first</h3>
+            <div class="grid d" data-col="10">
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+            </div>
+<pre>article:nth-child(3n+1) .dot {
+    background: #ae0000;
+}</pre>
+
+            <h3>Select only odd</h3>
+            <div class="grid e" data-col="10">
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+            </div>
+<pre>article:nth-child(odd) .dot {
+    background: #ae0000;
+}</pre>
+
+            <h3>Select list item</h3>
+            <div class="grid f" data-col="10">
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+            </div>
+<pre>article:last-child .dot {
+    background: #ae0000;
+}</pre>
+
+            <h3>Select list item</h3>
+            <div class="grid g" data-col="10">
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+                <article>
+                    <div class="dot"></div>
+                </article>
+            </div>
+<pre>article:nth-last-child(2) .dot {
+    background: #ae0000;
+}</pre>
+        </div>
+	</body>
+
+</html>

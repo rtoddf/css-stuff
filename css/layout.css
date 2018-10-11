@@ -1,3 +1,9 @@
+pre {
+    padding: 10px;
+    background: #dedede;
+    border-radius: 6px;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -60,6 +66,10 @@
 [data-col="6"]  {
     grid-template-columns: repeat(6, [col] 1fr);
     grid-template-rows: repeat(1, 100px [row]);
+}
+
+[data-col="10"]  {
+    grid-template-columns: repeat(10, [col] 1fr);
 }
 
 /* media queries */

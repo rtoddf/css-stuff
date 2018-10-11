@@ -1,0 +1,40 @@
+article {
+	border: 1px solid #fff;
+	align-self: center;
+	justify-self: center;
+}
+
+article .dot {
+	width: 20px;
+    height: 20px;
+    background: #000;
+	border-radius: 50%;
+}
+
+.a article:nth-child(3) .dot {
+    background: #ae0000;
+}
+
+.b article:nth-child(n+4) .dot {
+    background: #ae0000;
+}
+
+.c article:nth-child(-n+3) .dot {
+    background: #ae0000;
+}
+
+.d article:nth-child(3n + 1) .dot {
+    background: #ae0000;
+}
+
+.e article:nth-child(odd) .dot {
+    background: #ae0000;
+}
+
+.f article:last-child .dot {
+    background: #ae0000;
+}
+
+.g article:nth-last-child(2) .dot {
+    background: #ae0000;
+}
