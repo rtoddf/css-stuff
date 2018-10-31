@@ -14,66 +14,65 @@ html {
     box-sizing: inherit;
 }
 
-#c {
+.pulse {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-left: -260px;
+	width: 100%;
+    top: 50%;
 }
 
-.s {
+.grid {
+	padding: 0;
+}
+
+.circle {
 	width: 20px;
 	height: 20px;
+	margin: 0 auto;
 	border-radius: 50%;
 	cursor: pointer;
-	float: left;
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;
 	transition: all 0.2s;
 }
 
-.s:nth-child(n+2) {
-	margin-left: 80px;
-}
-
-.s:nth-child(1) {
+.circle:nth-child(1) {
 	background: #33ffbb;
 	/* name duration delay timing-function iteration-count */
 	/* these are also available - direction | fill-mode | play-state */
 	animation: r1 2s 0s ease-out infinite;
 }
 
-.s:nth-child(1):hover {
+.circle:nth-child(1):hover {
 	background: #ff3333;
 	animation: r20 0.5s 0.4s ease-out infinite;
 }
 
-.s:nth-child(2) {
+.circle:nth-child(2) {
 	background: #33ffdd;
 	animation: r2 2s 0.25s ease-out infinite;
 }
 
-.s:nth-child(3) {
+.circle:nth-child(3) {
 	background: #33ffff;
 	animation: r3 2s 0.5s ease-out infinite;
 }
 
-.s:nth-child(4) {
+.circle:nth-child(4) {
 	background: #33ddff;
 	animation: r4 2s 0.75s ease-out infinite;
 }
 
-.s:nth-child(5) {
+.circle:nth-child(5) {
 	background: #33bbff;
 	animation: r5 2s 1s ease-out infinite;
 }
 
-.s:nth-child(6) {
+.circle:nth-child(6) {
 	background: #3399ff;
 	animation: r6 2s 1.25s ease-out infinite;
 }
 
-.s:nth-child(6):hover {
+.circle:nth-child(6):hover {
 	background: #ff9933;
 	animation: r26 0.5s 0.4s ease-out infinite;
 }
