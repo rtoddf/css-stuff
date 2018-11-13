@@ -6,23 +6,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<title>Interfaces - CSS Transforms</title>
-		<link href="../../css-flexbox/lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-		<link href="../../css-flexbox/base.css" rel="stylesheet">
+		<link href="../../css/layouts.css" rel="stylesheet" />
 		<link href="../css/pocs/timeline01.css" rel="stylesheet">
+		<link href="../../css-flexbox/lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 
 	<body id="timeline">
-		<div class="flex-container">
-			<div class="flex-row">
-				<div class="flex-item">
+		<div class="container">
+			<div class="grid" data-col="2">
+				<article>
 					<div class="carousel-container">
 						<ul id="carousel" class="panels-backface-invisible">
 							<li>
-								<div class="image-holder">
+								<figure>
 									<span class="filler">
 										<img src="../images/bruno-mars.jpg" alt="Bruno Mars" title="Bruno Mars">
 									</span>
-								</div>
+								</figure>
 								<div class="content-holder">
 									<h4>Bruno Mars</h4>
 									<p class="timeStamp">2014</p>
@@ -30,11 +30,9 @@
 								</div>
 							</li>
 							<li>
-								<div class="image-holder">
-									<span class="filler">
+									<figure>
 										<img src="../images/adele.jpg" alt="Adele" title="Adele">
-									</span>
-								</div>
+									</figure>
 								<div class="content-holder">
 									<h4>Adele</h4>
 									<p class="timeStamp">2010</p>
@@ -42,11 +40,9 @@
 								</div>
 							</li>
 							<li>
-								<div class="image-holder">
-									<span class="filler">
+									<figure>
 										<img src="../images/usher.jpg" alt="Usher" title="Usher">
-									</span>
-								</div>
+									</figure>
 								<div class="content-holder">
 									<h4>Usher</h4>
 									<p class="timeStamp">2004</p>
@@ -54,11 +50,9 @@
 								</div>
 							</li>
 							<li>
-								<div class="image-holder">
-									<span class="filler">
+									<figure>
 										<img src="../images/beyonce.jpg" alt="Beyoncé" title="Beyoncé">
-									</span>
-								</div>
+									</figure>
 								<div class="content-holder">
 									<h4>Beyoncé</h4>
 									<p class="timeStamp">2000</p>
@@ -71,9 +65,7 @@
 							<i id="previous" data-increment="-1" class="fa fa-arrow-down" aria-hidden="true"></i>
 						</div>
 					</div>
-				</div>
-				<div class="flex-item">
-				</div>
+				</article>
 			</div>
 		</div>
 
