@@ -1,0 +1,19 @@
+.social i {
+    display: inline-block;
+    margin: 5px;
+    padding-top: 10px;
+    width: 42px;
+    height: 42px;
+    background-image: linear-gradient(to top, #04befe, #4481eb);
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px 0 rgba(149, 149, 149, 0.5);
+    font-size: 24px;
+    text-align: center;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.social i:hover {
+    transform: rotate(90deg);
+}
