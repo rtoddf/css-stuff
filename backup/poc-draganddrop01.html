@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interfaces - CSS Stuf - Drag and Drop</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <link href="../css-flexbox/base.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+    </head>
+
+    <body id="dragndrop">
+        <div class="flex-container">
+            <div class="flex-row">
+                <div class="flex-item">
+                    <h3>HTML5 - Drag &amp; Drop API</h3>
+                    <p>A simple project to show the feaures of the HTML5 drag and drop api.</p>
+                    <p>You can drag and drop any box over another to have them switch locations in the grid. You can also choose other categories to see the people/data in that category. Currently this a list is of politicians. The list is not complete, and I'll be adding more categories to it in the future.</p>
+                    <p>I'm working to get the list to use local storage to remember the order that you last left it when you come back.</p>
+
+                    <div id="gallery">
+                        <div id="columns"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../scripts/lib/jquery/jquery.min.js"></script>
+        <script src="../scripts/lib/underscore-min.js"></script>
+        <script src="scripts/poc-draganddrop01.js"></script>
+    </body>
+</html>

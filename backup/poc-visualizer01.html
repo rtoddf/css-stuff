@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Interfaces - CSS Transforms</title>
+        <!-- this will eventually be replaced by svg -->
+        <link href="../css-flexbox/lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css-flexbox/base.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+    </head>
+
+    <body id="visualizer01">
+        <div class="flex-container">
+            <div class="flex-row">
+                <div class="flex-item">
+                    <div class="listen-live-player">
+                        <div class="player-controls clearfix">
+                            <div class="control play-pause">
+                                <button id="play"><i class="fa fa-play-circle-o"></i></button>
+                            </div>
+                            
+                            <div class="player-volume-controls">
+                                <div class="volume-controls">
+            <!--                         <div class="control">
+                                        <i class="fa fa-volume-off"></i>
+                                    </div> -->
+                                    <div class="control">
+                                        <input type="range" id="volume" value="50" max="100" min="0" />
+                                    </div>
+            <!--                         <div class="control">
+                                        <i class="fa fa-volume-up"></i>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <audio crossOrigin="anonymous" id="audioElement" src="audio/15 Lucy In The Sky With Diamonds.m4a" type="audio/mpeg" preload="auto"></audio>
+        <!--                 <audio crossOrigin="anonymous" id="audioElement" src="http://oom-cmg.streamguys1.com/day953/day953.mp3" type="audio/mpeg" preload="auto"></audio> -->
+                    </div>
+                    <div class="display">
+                        <div id="wave"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="../scripts/lib/jquery/jquery.min.js"></script>
+    <script src="../scripts/lib/d3.min.js"></script>
+    <script src="scripts/controls.js"></script>
+    <script src="scripts/poc-visualizer01.js"></script>
+</html>
