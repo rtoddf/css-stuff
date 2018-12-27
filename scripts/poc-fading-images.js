@@ -59,7 +59,7 @@ setInterval(function(){
 function fade(random_image_holder, fade_out_speed, random_image, fade_in_speed){
     random_image_holder.find('img').fadeOut(fade_out_speed, function() {
         $(this)
-            .attr('src', '../images/' + random_image['image'])
+            .attr('src', '../../images/' + random_image['image'])
             .attr('alt', random_image['name'])
             .attr('title', random_image['name']);
         $(this).load(function(){
