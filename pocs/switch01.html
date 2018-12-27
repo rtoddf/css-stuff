@@ -8,39 +8,60 @@
 		<meta name="author" content="">
 
 		<title>Interfaces - CSS Transforms</title>
-		<link href="../../css-flexbox/base.css" rel="stylesheet" />
+		<link href="../../css/layouts.css" rel="stylesheet" />
+		<link href="../../css/displays.css" rel="stylesheet" />
 		<link href="../css/poc-switch01.css" rel="stylesheet" />
 	</head>
 
-	<body>
-
-		<div class="flex-container">
-			<div class="time-circle">
-				<div class="sun"></div>
-				<div class="moon">
-					<div></div>
-					<div></div>
-					<div></div>
+	<body data-theme="home">
+		<div class="container">
+			<header>
+				<h2>CSS Transition</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu iaculis leo. Ut justo erat, mollis non massa non,
+					volutpat lacinia magna. Nunc dapibus quis dolor quis semper. Morbi sollicitudin dapibus erat in lacinia. Curabitur
+					commodo eros eget ipsum pretium laoreet. In volutpat laoreet ex, in iaculis turpis lobortis a. Phasellus a cursus
+					enim,
+					eget vehicula mauris. Praesent ultrices metus sit amet magna convallis, non blandit sapien varius. Mauris pharetra
+					eros
+					aliquam finibus facilisis. In massa nunc, bibendum sed facilisis et, elementum ac mi. Aliquam consectetur magna vel
+					nunc tristique rhoncus.</p>
+			</header>
+			<div class="grid">
+				<div class="time-circle">
+					<div class="sun"></div>
+					<div class="moon">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<div class="stars">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<div class="water"></div>
 				</div>
-				<div class="stars">
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-				</div>
-				<div class="water"></div>
-			</div>
 
-			<div class="switch">
-				<div class="circle"></div>
+				<div class="switch">
+					<div class="circle"></div>
+				</div>
 			</div>
 		</div>
 
-		<script src="../../scripts/lib/jquery/jquery.min.js"></script>
-		<script src="../scripts/utilities.js"></script>
+		<script>
+			var switcher = document.querySelector('.switch');
+
+			// getElementsByTafName returns an array
+			// we only have one, so we don't have to loop
+			switcher.onclick = function() {
+				document.querySelector('body').classList.toggle("night");
+				switcher.classList.toggle("switched");
+			};
+		</script>
 	</body>
 
 </html>
