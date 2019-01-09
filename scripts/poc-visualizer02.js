@@ -11,13 +11,13 @@ $(document).ready(function () {
     var audioElement = document.getElementById('audioElement');
     var audioSrc = audioCtx.createMediaElementSource(audioElement);
     var analyser = audioCtx.createAnalyser();
- 
+
     // bind our analyser to the media element source.
     audioSrc.connect(analyser);
     audioSrc.connect(audioCtx.destination);
- 
+
     // var frequencyData = new Uint8Array(analyser.frequencyBinCount);
-    var frequencyData = new Uint8Array(60);
+    var frequencyData = new Uint8Array(240);
 
     console.log('frequencyData: ', frequencyData)
 
@@ -35,27 +35,27 @@ $(document).ready(function () {
         })
 
     aspect = chart_container.width() / chart_container.height()
- 
+
     // continuously loop and update chart with frequency data.
     function renderChart() {
         requestAnimationFrame(renderChart);
- 
+
         // copy frequency data to frequencyData array.
         analyser.getByteFrequencyData(frequencyData);
         // console.log(frequencyData);
- 
+
         // scale things to fit
         var radiusScale = d3.scale.linear()
             .domain([0, d3.max(frequencyData)])
-            .range([20, height/2 - 10]);
- 
+            .range([-100, height/2 - 10]);
+
         var hueScale = d3.scale.linear()
             .domain([0, d3.max(frequencyData)])
             .range([0, 360]);
 
         var strokeScale = d3.scale.linear()
-            .domain([0, d3.max(frequencyData)])
-            .range([0, 6]);
+            .domain([0, d3.max(frequencyData) / 2])
+            .range([0, 2]);
 
         var opacityScale = d3.scale.linear()
             .domain([0, d3.max(frequencyData)])
@@ -64,13 +64,13 @@ $(document).ready(function () {
         var hslScale = d3.scale.linear()
             .domain([0, d3.max(frequencyData)])
             .range([0, 100]);
- 
+
         // update d3 chart with new data
         var circles = vis_group.selectAll('circle')
             .data(frequencyData);
- 
+
         circles.enter().append('circle');
- 
+
         circles
             .attr({
                 r: function(d) {
@@ -78,7 +78,7 @@ $(document).ready(function () {
                 },
                 cx: width/2,
                 cy: height/2,
-                fill: 'none', 
+                fill: 'none',
                 'stroke-width': function(d){
                     return strokeScale(d)
                 },
@@ -86,18 +86,25 @@ $(document).ready(function () {
                     return opacityScale(d)
                 },
                 stroke: function(d) {
-                    return d3.hsl(360, hslScale(d), hslScale(d)*.7);
+                    if(d <= 100){
+                        return d3.hsl("steelblue");
+                    } else if(d > 100 && d < 150) {
+                        return d3.hsl("orange");
+                    } else {
+                        return d3.hsl("green");
+                    }
+                    // return d3.hsl(360, hslScale(d), hslScale(d)*.7);
                     // return d3.hsl(hueScale(d), 0.5, 0.5);
                 }
            });
- 
-        circles.exit().remove(); 
+
+        circles.exit().remove();
     }
- 
+
     // run the loop
     renderChart();
- 
+
     // just for blocks viewer size
     d3.select(self.frameElement).style('height', '700px');
- 
+
 });
