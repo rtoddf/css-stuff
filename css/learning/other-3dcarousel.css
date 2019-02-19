@@ -164,3 +164,23 @@ div[data-layout="column"] {
 			 -o-transition: opacity 1s, -o-transform 1s;
 					transition: opacity 1s, transform 1s;
 }
+
+.options {
+	text-align: center;
+}
+
+button {
+	background-color: #999;
+	display: inline-block;
+	cursor: pointer;
+	color: #333;
+	font-size: 14px;
+	padding: 10px 16px;
+	text-decoration: none;
+	border: none;
+}
+
+button:hover {
+	background-color:#666;
+	color: #fff;
+}
