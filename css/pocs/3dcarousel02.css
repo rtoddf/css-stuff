@@ -1,21 +1,3 @@
-#threed-carousel {
-    background-color: #433b2c;
-    color: #fbefd9;
-}
-
-.flex-container {
-	width: 80%;
-	margin: 20px auto;
-}
-
-.instructions {
-    margin-bottom: 20px;
-}
-
-.instructions p {
-    margin-bottom: 5px;
-}
-
 #navigation,
 #toggle {
     margin: 20px auto;

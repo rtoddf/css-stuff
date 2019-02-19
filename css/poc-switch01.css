@@ -1,21 +1,5 @@
 /* http://codepen.io/Catagen/pen/PqYdXR/ */
 /* page */
-.container {
-	width: 100%;
-	height: 100vh;
-	padding: 40px;
-	/* background: #f1ede3; */
-  
-	/* -webkit-transition: background 0.5s ease-in-out;
-			transition: background 0.5s ease-in-out; */
-}
-
-.night .container {
-	/* background: #080d17;
-	color: #e9e5d5; */
-}
-
-
 
 /* circle */
 .time-circle {

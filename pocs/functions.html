@@ -6,14 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>Interfaces - CSS Transforms</title>
-        <link href="../../css-flexbox/base.css" rel="stylesheet" />
+        <link href="../../css/layouts.css" rel="stylesheet" />
+        <link href="../../css/displays.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Average" rel="stylesheet">
         <link href="../css/pocs/functions.css" rel="stylesheet">
     </head>
 
     <body>
-        <div class="flex-container">
-            <div class="flex-row">
-                <div class="flex-item rotate-x">
+        <div class="container">
+            <div class="grid">
+                <h2>CSS POCs</h2>
+            </div>
+            <div class="grid" data-col="3">
+                <div class="rotate-x">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -22,7 +28,7 @@
                     </div>
                     <pre>transform: rotateX(45deg);</pre>
                 </div>
-                <div class="flex-item rotate-x origin-bottom">
+                <div class="rotate-x origin-bottom">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -32,7 +38,7 @@
                     <pre>transform: rotateX(45deg);
 transform-origin: bottom;</pre>
                 </div>
-                <div class="flex-item rotate-x origin-top">
+                <div class="rotate-x origin-top">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -41,11 +47,8 @@ transform-origin: bottom;</pre>
                     <pre>transform: rotateX(45deg);
 transform-origin: top;</pre>
                 </div>
-                <div class="flex-item"></div>
-            </div>
 
-            <div class="flex-row">
-                <div class="flex-item rotate-y">
+                <div class="rotate-y">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -53,7 +56,7 @@ transform-origin: top;</pre>
                     </div>
                     <pre>transform: rotateY(45deg);</pre>
                 </div>
-                <div class="flex-item rotate-y origin-left">
+                <div class="rotate-y origin-left">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -63,7 +66,7 @@ transform-origin: top;</pre>
                     <pre>transform: rotateY(45deg);
 transform-origin: left;</pre>
                 </div>
-                <div class="flex-item rotate-y origin-right">
+                <div class="rotate-y origin-right">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -72,10 +75,7 @@ transform-origin: left;</pre>
                     <pre>transform: rotateY(45deg);
 transform-origin: right;</pre>
                 </div>
-                <div class="flex-item"></div>
-            </div>
-            <div class="flex-row">
-                <div class="flex-item rotate-z">
+                <div class="rotate-z">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -83,12 +83,9 @@ transform-origin: right;</pre>
                     </div>
                     <pre>transform: rotateZ(45deg);</pre>
                 </div>
-                <div class="flex-item"></div>
-                <div class="flex-item"></div>
-                <div class="flex-item"></div>
             </div>
-           <div class="flex-row">
-                <div class="flex-item rotate-z origin-left">
+            <div class="grid" data-col="4">
+                <div class="rotate-z origin-left">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -97,7 +94,7 @@ transform-origin: right;</pre>
                     <pre>transform: rotateZ(45deg);
 transform-origin: left;</pre>
                 </div>
-                <div class="flex-item rotate-z origin-right">
+                <div class="rotate-z origin-right">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -106,7 +103,7 @@ transform-origin: left;</pre>
                     <pre>transform: rotateZ(45deg);
 transform-origin: right;</pre>
                 </div>
-                <div class="flex-item rotate-z origin-top">
+                <div class="rotate-z origin-top">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -115,7 +112,7 @@ transform-origin: right;</pre>
                     <pre>transform: rotateZ(45deg);
 transform-origin: top;</pre>
                 </div>
-                <div class="flex-item rotate-z origin-bottom">
+                <div class="rotate-z origin-bottom">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -124,9 +121,8 @@ transform-origin: top;</pre>
                     <pre>transform: rotateZ(45deg);
 transform-origin: bottom;</pre>
                 </div>
-            </div>
-            <div class="flex-row">
-                <div class="flex-item rotate-z origin-left-top">
+
+                <div class="rotate-z origin-left-top">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -135,7 +131,7 @@ transform-origin: bottom;</pre>
                     <pre>transform: rotateZ(45deg);
 transform-origin: left top;</pre>
                 </div>
-                <div class="flex-item rotate-z origin-left-bottom">
+                <div class="rotate-z origin-left-bottom">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -144,7 +140,7 @@ transform-origin: left top;</pre>
                     <pre>transform: rotateZ(45deg);
 transform-origin: left bottom;</pre>
                 </div>
-                <div class="flex-item rotate-z origin-right-top">
+                <div class="rotate-z origin-right-top">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -153,7 +149,7 @@ transform-origin: left bottom;</pre>
                     <pre>transform: rotateZ(45deg);
 transform-origin: right top;</pre>
                 </div>
-                <div class="flex-item rotate-z origin-right-bottom">
+                <div class="rotate-z origin-right-bottom">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -162,9 +158,8 @@ transform-origin: right top;</pre>
                     <pre>transform: rotateZ(45deg);
 transform-origin: right bottom;</pre>
                 </div>
-            </div>
-            <div class="flex-row">
-                <div class="flex-item translate-x">
+
+                <div class="translate-x">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -172,7 +167,7 @@ transform-origin: right bottom;</pre>
                     </div>
                     <pre>transform: translateX(100px);</pre>
                 </div>
-                <div class="flex-item translate-y">
+                <div class="translate-y">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -180,7 +175,7 @@ transform-origin: right bottom;</pre>
                     </div>
                     <pre>transform: translateY(100px);</pre>
                 </div>
-                <div class="flex-item translate-z">
+                <div class="translate-z">
                     <div class="cont">
                         <div class="box">
                             <h3>Text</h3>
@@ -188,7 +183,6 @@ transform-origin: right bottom;</pre>
                     </div>
                     <pre>transform: translateZ(100px);</pre>
                 </div>
-                <div class="flex-item"></div>
             </div>
         </div>
     </body>
