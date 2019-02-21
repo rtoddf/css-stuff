@@ -1,36 +1,13 @@
-html {
-	background: #333;
-	overflow: hidden;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-}
-
-*, *:before, *:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-
-.flex-container {
-	width: 80%;
-	margin: 40px auto;
-}
-
-.flex-row {
-	display: flex;
-	width: 100%;
+.grid {
+	grid-gap: 0;
 }
 
 .grid div {
-	/* flex: 1 1 20px;
-	justify-content: space-between; */
-	height: 225px;
+	height: 40px;
 	padding: 40px;
 }
 
-.flex-item .circle {
+.grid div .circle {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
@@ -39,25 +16,25 @@ html {
 	/* name duration delay timing-function iteration-count */
 	/* these are also available - direction | fill-mode | play-state */
 	animation: pulse 2.5s 0s ease-out infinite;
-	// transition: all 0.2s;
+	/* transition: all 0.2s; */
 }
 
-.flex-item .circle:hover {
+.grid div .circle:hover {
 	animation: pulse-hover 0.5s 0s ease-out infinite;
 }
 
-.flex-item:nth-child(3) .circle,
-.flex-item:nth-child(5) .circle {
+.grid div:nth-child(3) .circle,
+.grid div:nth-child(5) .circle {
 	animation-delay: 0.25s;
 }
 
-.flex-item:nth-child(2) .circle,
-.flex-item:nth-child(6) .circle {
+.grid div:nth-child(2) .circle,
+.grid div:nth-child(6) .circle {
 	animation-delay: 0.5s;
 }
 
-.flex-item:nth-child(1) .circle,
-.flex-item:nth-child(7) .circle {
+.grid div:nth-child(1) .circle,
+.grid div:nth-child(7) .circle {
 	animation-delay: 0.75s;
 }
 
