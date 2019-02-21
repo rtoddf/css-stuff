@@ -23,9 +23,9 @@ html {
 	width: 100%;
 }
 
-.flex-item {
-	flex: 1 1 20px;
-	justify-content: space-between;
+.grid div {
+	/* flex: 1 1 20px;
+	justify-content: space-between; */
 	height: 225px;
 	padding: 40px;
 }

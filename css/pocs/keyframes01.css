@@ -1,30 +1,9 @@
-html {
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-}
-
-*, *:before, *:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-body {
-	background: #fff;
-	color: #666;
-}
-
-.flex-container {
-	width: 80%;
-}
-
 .cont {
 	position: relative;
 	width: 200px;
 	height: 200px;
 	margin: 0 auto;
-	border: 1px solid #000;
+	border: 1px solid #fff;
 	text-align: center;
 	perspective: 600px;
 }
@@ -33,11 +12,11 @@ body {
 	width: 100%;
 	height: 100%;
 	background: orange;
-	opacity: .5;
+	opacity: .8;
 	border: 1px solid #000;
 	text-align: center;
 
-	// animation-delay: 1s;
+	/* animation-delay: 1s; */
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-duration: 6s;
@@ -45,32 +24,32 @@ body {
 }
 
 @keyframes rotate-x {
-	// from {
-	// 	transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-	// }
+	/* from {
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	} */
 	/* from is assumed */
 	to {
 		transform: rotateX(360deg) rotateY(0deg) rotateZ(0deg);
 	}
 
-	// 50%, 100% {
-	//     transform: rotateX(360deg) rotateY(0deg) rotateZ(0deg);
-	// }
+	/* 50%, 100% {
+	    transform: rotateX(360deg) rotateY(0deg) rotateZ(0deg);
+	} */
 }
 
 @keyframes rotate-y {
-	// from {
-	// 	transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-	// }
+	/* from {
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	} */
 	to {
 		transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
 	}
 }
 
 @keyframes rotate-z {
-	// from {
-	// 	transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-	// }
+	/* from {
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	} */
 	to {
 		transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
 	}
