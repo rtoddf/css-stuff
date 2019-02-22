@@ -1,27 +1,9 @@
 /* https://codepen.io/Raphael/pen/fqweF */
 
-html {
-	background: #333;
-	overflow: hidden;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-}
-
-*, *:before, *:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
 .pulse {
 	position: absolute;
-	width: 100%;
+	width: 75%;
     top: 50%;
-}
-
-.grid {
-	padding: 0;
 }
 
 .circle {
