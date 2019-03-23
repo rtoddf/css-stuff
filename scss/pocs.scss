@@ -1,3 +1,91 @@
+/* begin functions */
+.functions {
+	.cont {
+		position: relative;
+		width: 100px;
+		height: 100px;
+		margin: 0 auto;
+		border: 1px solid #fff;
+		text-align: center;
+		perspective: 600px;
+
+		.box {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: orange;
+			color: #fff;
+			opacity: .8;
+			border: 1px solid #000;
+			text-align: center;
+			transform-style: preserve-3d;
+			transition: transform .3s;
+		}
+	}
+
+	pre {
+		margin-top: 20px;
+		color: #000;
+	}
+
+	.rotate-x .box {
+		transform: rotateX( 45deg );
+	}
+
+	.rotate-y .box {
+		transform: rotateY(45deg);
+	}
+
+	.rotate-z .box {
+		transform: rotateZ(45deg);
+	}
+
+	.translate-x .box {
+		transform: translateX(100px);
+	}
+
+	.translate-y .box {
+		transform: translateY(100px);
+	}
+
+	.translate-z .box {
+		transform: translateZ(150px);
+	}
+
+	.origin-bottom .box {
+		transform-origin: bottom;
+	}
+
+	.origin-top .box {
+		transform-origin: top;
+	}
+
+	.origin-left .box {
+		transform-origin: left;
+	}
+
+	.origin-right .box {
+		transform-origin: right;
+	}
+
+	.origin-left-top .box {
+		transform-origin: left top;
+	}
+
+	.origin-left-bottom .box {
+		transform-origin: left bottom;
+	}
+
+	.origin-right-top .box {
+		transform-origin: right top;
+	}
+
+	.origin-right-bottom .box {
+		transform-origin: right bottom;
+	}
+}
+/* end functions */
 
 /* begin pulse01 */
 /* https://codepen.io/Raphael/pen/fqweF */
