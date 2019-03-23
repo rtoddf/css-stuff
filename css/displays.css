@@ -1,0 +1,472 @@
+.grid[data-margin="0"] {
+  grid-gap: 0;
+}
+
+[data-image-layout=square]:after {
+  content: "";
+  float: left;
+  display: block;
+  padding-top: 100%;
+}
+[data-image-layout=square] .tile {
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #222;
+  transition: all 0.3s ease;
+}
+[data-image-layout=square] .image-holder,
+[data-image-layout=square] figure {
+  height: 100%;
+}
+[data-image-layout=square] .image-holder img,
+[data-image-layout=square] figure img {
+  width: 102%;
+  height: 102%;
+  max-width: 102%;
+  max-height: 102%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+[data-image-layout=square] .image-holder img:hover,
+[data-image-layout=square] figure img:hover {
+  width: 110%;
+  height: 110%;
+  max-width: 110%;
+  max-height: 110%;
+  margin: -5%;
+}
+
+.content-holder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* height: 35%; */
+  background: rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+.content-holder h4 {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+.content-holder p {
+  margin: 0;
+  padding: 10px;
+  font-size: 0.875rem;
+  line-height: 16px;
+}
+.content-holder a {
+  color: #fff;
+  font-weight: 400;
+}
+
+/* begin panels */
+.panel {
+  padding: 20px 20px 10px;
+  margin-bottom: 40px;
+  background: #fff;
+  border: 1px solid #333;
+  -webkit-border-radius: 4px;
+  border-radius: 6px;
+  color: #444;
+  box-shadow: 0 2px 26px 4px rgba(0, 0, 0, 0.1);
+}
+.panel figure {
+  margin: 0 -20px 10px;
+}
+.panel figure .filler > img {
+  width: 102%;
+  max-width: 102%;
+}
+.panel figcaption {
+  padding: 0 20px;
+}
+.panel p {
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+.panel a {
+  color: #333;
+}
+.panel ul {
+  margin-bottom: 0;
+  padding-top: 20px;
+}
+.panel ul li {
+  border: none;
+  line-height: 1.25;
+}
+.panel ul li a {
+  padding: 0 0 0.5rem;
+  border: none;
+  background: transparent;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.panel ul li p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.panel ul li:after {
+  width: 100%;
+  background-color: #D5D5D5;
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 1.125rem;
+  margin-bottom: 1.0625rem;
+}
+.panel ul li:last-child:after {
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+/* end panels */
+/* begin media-container */
+.media-container .image-holder {
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.media-container .content-holder {
+  display: table;
+  width: 85%;
+  height: auto;
+  min-height: 35px;
+  bottom: -10%;
+  margin: 0 auto;
+  background: rgba(34, 34, 34, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  text-align: center;
+}
+.media-container .content-holder p {
+  display: table-cell;
+  padding: 0;
+  vertical-align: middle;
+}
+
+/* end media-container */
+/* begin id cards */
+[data-theme=narrow] .container {
+  width: 70%;
+}
+
+.idcard.grid {
+  grid-template-columns: repeat(3, [col] 1fr);
+}
+.idcard.grid > div:nth-child(1) {
+  grid-column: span 1;
+  align-self: start;
+}
+.idcard.grid > div:nth-child(2) {
+  grid-column: span 2;
+  align-self: center;
+}
+.idcard .card {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff;
+  color: #222;
+  border-radius: 6px;
+  box-shadow: 0 2px 26px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.idcard .card h4 {
+  margin: 20px 0 0;
+  font-size: 35px;
+}
+.idcard .card h5 {
+  margin: 0 0 20px;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 20px;
+  line-height: 1.75;
+  letter-spacing: -0.5px;
+}
+.idcard .card figure img {
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 26px 4px rgba(0, 0, 0, 0.1);
+}
+.idcard .card .icon-holder {
+  display: inline-block;
+  margin: 5px;
+  padding-top: 5px;
+  width: 42px;
+  height: 42px;
+  background-image: linear-gradient(to top, #04befe, #4481eb);
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px 0 rgba(149, 149, 149, 0.5);
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.idcard .card .icon-holder:hover {
+  animation: pulse 0.5s 0s ease-out;
+}
+.idcard .description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+}
+.idcard .description p:first-of-type {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  [data-theme=narrow] .container {
+    width: 90%;
+    margin-top: 30px;
+  }
+
+  .idcard.grid {
+    grid-template-columns: repeat(1, [col] 1fr);
+  }
+  .idcard.grid > div:nth-child(1),
+.idcard.grid > div:nth-child(2) {
+    grid-column: span 1;
+  }
+  .idcard .card {
+    width: auto;
+  }
+  .idcard .description {
+    font-size: 16px;
+    line-height: 2.25;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.7);
+  }
+  60% {
+    transform: scale(1.5);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* end id cards */
+/* begin mosaic */
+.mosaic {
+  grid-template-columns: repeat(7, [col] 1fr);
+  grid-template-rows: repeat(2, [row] 250px);
+  grid-gap: 20px;
+}
+.mosaic ul {
+  list-style: none;
+}
+.mosaic li {
+  display: grid;
+  background: #ae0000;
+  color: #fff;
+  border-radius: 6px;
+}
+.mosaic li:nth-child(1) {
+  grid-column: span 2;
+}
+.mosaic li:nth-child(2) {
+  grid-column: span 3;
+  background: #fd7802;
+}
+.mosaic li:nth-child(3) {
+  grid-column: span 2;
+}
+.mosaic li:nth-child(4) {
+  grid-column: span 4;
+  background: #fdad12;
+}
+.mosaic li:nth-child(5) {
+  grid-column: span 1;
+}
+.mosaic li:nth-child(6) {
+  grid-column: span 2;
+  background: #fd7802;
+}
+.mosaic li p {
+  align-self: center;
+  padding: 0 40px;
+  font-family: "Average", serif;
+  font-size: 1.375rem;
+  line-height: normal;
+}
+
+@media (max-width: 600px) {
+  .mosaic {
+    grid-template-columns: repeat(1, [col] 1fr);
+    grid-template-rows: repeat(6, [row] 250px);
+    grid-gap: 20px;
+    width: auto;
+  }
+
+  .mosaic li {
+    font-size: 1.25rem;
+  }
+  .mosaic li:nth-child(1), .mosaic li:nth-child(2), .mosaic li:nth-child(3), .mosaic li:nth-child(4), .mosaic li:nth-child(5), .mosaic li:nth-child(6) {
+    grid-column: span 1;
+  }
+}
+/* end mosaic */
+/* begin five-item-feature */
+.five-item-feature {
+  grid-row-gap: 1.25rem;
+  font-family: "Average", serif;
+}
+.five-item-feature article:nth-child(2), .five-item-feature article:nth-child(3), .five-item-feature article:nth-child(4), .five-item-feature article:nth-child(5), .five-item-feature article:nth-child(2), .five-item-feature article:nth-child(3), .five-item-feature article:nth-child(4), .five-item-feature article:nth-child(5),
+.five-item-feature li:nth-child(2),
+.five-item-feature li:nth-child(3),
+.five-item-feature li:nth-child(4),
+.five-item-feature li:nth-child(5),
+.five-item-feature li:nth-child(2),
+.five-item-feature li:nth-child(3),
+.five-item-feature li:nth-child(4),
+.five-item-feature li:nth-child(5) {
+  flex-direction: row;
+  display: flex;
+}
+.five-item-feature article:nth-child(2) h3, .five-item-feature article:nth-child(3) h3, .five-item-feature article:nth-child(4) h3, .five-item-feature article:nth-child(5) h3, .five-item-feature article:nth-child(2) h3, .five-item-feature article:nth-child(3) h3, .five-item-feature article:nth-child(4) h3, .five-item-feature article:nth-child(5) h3,
+.five-item-feature li:nth-child(2) h3,
+.five-item-feature li:nth-child(3) h3,
+.five-item-feature li:nth-child(4) h3,
+.five-item-feature li:nth-child(5) h3,
+.five-item-feature li:nth-child(2) h3,
+.five-item-feature li:nth-child(3) h3,
+.five-item-feature li:nth-child(4) h3,
+.five-item-feature li:nth-child(5) h3 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+.five-item-feature article:nth-child(2) .image-holder, .five-item-feature article:nth-child(3) .image-holder, .five-item-feature article:nth-child(4) .image-holder, .five-item-feature article:nth-child(5) .image-holder, .five-item-feature article:nth-child(2) .image-holder, .five-item-feature article:nth-child(3) .image-holder, .five-item-feature article:nth-child(4) .image-holder, .five-item-feature article:nth-child(5) .image-holder,
+.five-item-feature li:nth-child(2) .image-holder,
+.five-item-feature li:nth-child(3) .image-holder,
+.five-item-feature li:nth-child(4) .image-holder,
+.five-item-feature li:nth-child(5) .image-holder,
+.five-item-feature li:nth-child(2) .image-holder,
+.five-item-feature li:nth-child(3) .image-holder,
+.five-item-feature li:nth-child(4) .image-holder,
+.five-item-feature li:nth-child(5) .image-holder {
+  flex: 0 0 calc(50% - 7.5px);
+  margin-right: 15px;
+}
+.five-item-feature article:nth-child(1) h3, .five-item-feature article:nth-child(1) h3,
+.five-item-feature li:nth-child(1) h3,
+.five-item-feature li:nth-child(1) h3 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.five-item-feature .filler {
+  border-radius: 0.375rem;
+}
+
+@media (min-width: 767px) {
+  .five-item-feature {
+    grid-template-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] 1fr [col4-start col3-end] 1fr [col4-end];
+    grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
+    grid-column-gap: 2.5rem;
+  }
+  .five-item-feature article:nth-child(2), .five-item-feature article:nth-child(3), .five-item-feature article:nth-child(4), .five-item-feature article:nth-child(5), .five-item-feature article:nth-child(2), .five-item-feature article:nth-child(3), .five-item-feature article:nth-child(4), .five-item-feature article:nth-child(5),
+.five-item-feature li:nth-child(2),
+.five-item-feature li:nth-child(3),
+.five-item-feature li:nth-child(4),
+.five-item-feature li:nth-child(5),
+.five-item-feature li:nth-child(2),
+.five-item-feature li:nth-child(3),
+.five-item-feature li:nth-child(4),
+.five-item-feature li:nth-child(5) {
+    flex-direction: inherit;
+    display: block;
+  }
+  .five-item-feature article:nth-child(2) .image-holder, .five-item-feature article:nth-child(3) .image-holder, .five-item-feature article:nth-child(4) .image-holder, .five-item-feature article:nth-child(5) .image-holder, .five-item-feature article:nth-child(2) .image-holder, .five-item-feature article:nth-child(3) .image-holder, .five-item-feature article:nth-child(4) .image-holder, .five-item-feature article:nth-child(5) .image-holder,
+.five-item-feature li:nth-child(2) .image-holder,
+.five-item-feature li:nth-child(3) .image-holder,
+.five-item-feature li:nth-child(4) .image-holder,
+.five-item-feature li:nth-child(5) .image-holder,
+.five-item-feature li:nth-child(2) .image-holder,
+.five-item-feature li:nth-child(3) .image-holder,
+.five-item-feature li:nth-child(4) .image-holder,
+.five-item-feature li:nth-child(5) .image-holder {
+    flex: inherit;
+    margin-right: 0;
+  }
+  .five-item-feature article :nth-child(1), .five-item-feature article:nth-child(1),
+.five-item-feature li :nth-child(1),
+.five-item-feature li:nth-child(1) {
+    grid-column: col2-start/col3-end;
+    grid-row: row1-start/row2-end;
+  }
+  .five-item-feature article :nth-child(1) h3, .five-item-feature article:nth-child(1) h3,
+.five-item-feature li :nth-child(1) h3,
+.five-item-feature li:nth-child(1) h3 {
+    font-size: 1.875rem;
+  }
+}
+/* end five-item-feature */
+/* begin four-item-feature */
+/* https://css-tricks.com/useful-nth-child-recipies/ */
+.four-item-feature {
+  grid-template-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] 1fr [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end];
+  grid-template-rows: [row1-start] auto [row1-end row2-start] auto [row2-end row3-start] auto [row3-end];
+  grid-column-gap: 2rem;
+}
+.four-item-feature article:nth-child(1),
+.four-item-feature div:nth-child(1),
+.four-item-feature li:nth-child(1) {
+  grid-column: col1-start/col3-end;
+  grid-row: row1-start/row3-end;
+}
+.four-item-feature article:nth-child(2), .four-item-feature article:nth-child(3), .four-item-feature article:nth-child(4),
+.four-item-feature div:nth-child(2),
+.four-item-feature div:nth-child(3),
+.four-item-feature div:nth-child(4),
+.four-item-feature li:nth-child(2),
+.four-item-feature li:nth-child(3),
+.four-item-feature li:nth-child(4) {
+  grid-column: col4-start/col5-end;
+  flex-direction: row;
+  display: flex;
+}
+.four-item-feature article:nth-child(2) figure, .four-item-feature article:nth-child(3) figure, .four-item-feature article:nth-child(4) figure,
+.four-item-feature div:nth-child(2) figure,
+.four-item-feature div:nth-child(3) figure,
+.four-item-feature div:nth-child(4) figure,
+.four-item-feature li:nth-child(2) figure,
+.four-item-feature li:nth-child(3) figure,
+.four-item-feature li:nth-child(4) figure {
+  flex: 0 0 calc(50% - 7.5px);
+  margin-right: 15px;
+}
+.four-item-feature article:nth-child(n+2) .content h3,
+.four-item-feature div:nth-child(n+2) .content h3,
+.four-item-feature li:nth-child(n+2) .content h3 {
+  font-size: 1rem;
+}
+.four-item-feature .filler {
+  border-radius: 0.375rem;
+}
+
+/* begin four-item-feature */
+
+/*# sourceMappingURL=displays.css.map */

@@ -15,12 +15,12 @@
 	background: #333;
 	/* name duration delay timing-function iteration-count */
 	/* these are also available - direction | fill-mode | play-state */
-	animation: pulse 2.5s 0s ease-out infinite;
+	animation: pulse02 2.5s 0s ease-out infinite;
 	/* transition: all 0.2s; */
 }
 
 .grid div .circle:hover {
-	animation: pulse-hover 0.5s 0s ease-out infinite;
+	animation: pulse02-hover 0.5s 0s ease-out infinite;
 }
 
 .grid div:nth-child(3) .circle,
@@ -38,7 +38,7 @@
 	animation-delay: 0.75s;
 }
 
-@keyframes pulse {
+@keyframes pulse02 {
 	0% {
 		box-shadow: 0 0 8px 6px rgba(255, 135, 0, 0), 0 0 0px 0px #333, 0 0 0px 0px rgba(255, 135, 0, 0);
 	}
@@ -50,7 +50,7 @@
 	}
 }
 
-@keyframes pulse-hover {
+@keyframes pulse02-hover {
 	from {
 		box-shadow: 0 0 8px 6px #fff, 0 0 12px 10px #333, 0 0 12px 14px #fff;
 	}
