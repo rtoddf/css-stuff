@@ -1,149 +1,20 @@
-/* begin neon type */
-@keyframes neon-text {
-  0% {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #f90, 0 0 70px #f90, 0 0 80px #f90, 0 0 100px #f90, 0 0 150px #f90;
-  }
-  100% {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f90, 0 0 35px #f90, 0 0 40px #f90, 0 0 50px #f90, 0 0 75px #f90;
-  }
-}
-@keyframes neon-box {
-  0% {
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #f90, 0 0 70px #f90, 0 0 80px #f90, 0 0 100px #f90, 0 0 150px #f90;
-  }
-  100% {
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f90, 0 0 35px #f90, 0 0 40px #f90, 0 0 50px #f90, 0 0 75px #f90;
-  }
-}
-/* end neon type */
-/* begin 3d cube */
-@keyframes spincube {
-  from, to {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  }
-  16% {
-    transform: rotateY(-90deg);
-  }
-  33% {
-    transform: rotateY(-90deg) rotateZ(90deg);
-  }
-  50% {
-    transform: rotateY(-180deg) rotateZ(90deg);
-  }
-  66% {
-    transform: rotateY(-270deg) rotateX(90deg);
-  }
-  83% {
-    transform: rotateX(90deg);
-  }
-}
-/* end 3d cube */
-/* begin keyframes */
 @keyframes rotate-x {
-  /* from {
-      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  } */
   /* from is assumed */
   to {
     transform: rotateX(360deg) rotateY(0deg) rotateZ(0deg);
   }
-  /* 50%, 100% {
-      transform: rotateX(360deg) rotateY(0deg) rotateZ(0deg);
-  } */
 }
 @keyframes rotate-y {
-  /* from {
-      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  } */
   to {
     transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
   }
 }
 @keyframes rotate-z {
-  /* from {
-      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  } */
   to {
     transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
   }
 }
-/* end keyframes */
 
-/* begin neon type */
-/* https://codepen.io/FelixRilling/pen/qzfoc */
-.neon-type .box {
-  display: inline-block;
-  margin: 60px;
-  padding: 20px 40px;
-  background-color: #222;
-  border: 10px double rgba(255, 153, 0, 0.5);
-  border-radius: 20px;
-  animation: neon-box 1.5s ease-in-out infinite alternate;
-  text-align: center;
-}
-.neon-type .box p {
-  margin-bottom: 0;
-  padding: 20px;
-  color: #f90;
-  font-family: Audiowide;
-  font-size: 7em;
-  animation: neon-text 1.5s ease-in-out infinite alternate;
-}
-
-/* end neon type */
-/* begin 3d cube */
-.cube01 .cubespinner {
-  animation-name: spincube;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 12s;
-  transform-style: preserve-3d;
-  transform-origin: 60px 60px 0;
-}
-.cube01 .cubespinner div {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  border: 1px solid #ccc;
-  background: rgba(255, 255, 255, 0.8);
-  color: #222;
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
-  line-height: 120px;
-  text-align: center;
-  font-size: 100px;
-}
-.cube01 .cubespinner div.face1 {
-  transform: translateZ(60px);
-}
-.cube01 .cubespinner div.face2 {
-  transform: rotateY(90deg) translateZ(60px);
-}
-.cube01 .cubespinner div.face3 {
-  transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
-}
-.cube01 .cubespinner div.face4 {
-  transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
-}
-.cube01 .cubespinner div.face5 {
-  transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
-}
-.cube01 .cubespinner div.face6 {
-  transform: rotateX(-90deg) translateZ(60px);
-}
-
-/* end 3d cube */
-
-
-
-/* end pulse01 */
-/* begin pulse02 */
-
-/* end pulse02 */
-/* begin pulse03 */
-/* https://codepen.io/Raphael/pen/fqweF */
-
-
-/* end pulse03 */
 /* begin icons */
 .rotate .social i {
   display: inline-block;
@@ -182,7 +53,3 @@
 .pulse .icon-holder:hover {
   animation: pulse 0.5s 0s ease-out;
 }
-
-/* end icons */
-
-/*# sourceMappingURL=pocs.css.map */
