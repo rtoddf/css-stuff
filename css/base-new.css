@@ -96,3 +96,62 @@ pre {
     border-radius: 6px;
     font-size: 0.875rem;
 }
+
+
+
+.grid[data-margin="0"] {
+    grid-gap: 0;
+}
+
+.grid[data-margin="0"] img {
+    border: none;
+}
+
+
+[data-image-layout=square]:after {
+    content: "";
+    float: left;
+    display: block;
+    padding-top: 100%;
+}
+
+[data-image-layout=square] .tile {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #222;
+    transition: all 0.3s ease;
+}
+
+[data-image-layout=square] .image-holder,
+[data-image-layout=square] figure {
+    height: 100%;
+}
+
+[data-image-layout=square] .image-holder img,
+[data-image-layout=square] figure img {
+    width: 102%;
+    height: 102%;
+    max-width: 102%;
+    max-height: 102%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+[data-image-layout=square] .image-holder img:hover,
+[data-image-layout=square] figure img:hover {
+    width: 110%;
+    height: 110%;
+    max-width: 110%;
+    max-height: 110%;
+    margin: -5%;
+}

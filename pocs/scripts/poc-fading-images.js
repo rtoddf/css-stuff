@@ -15,12 +15,7 @@ $(document).ready(function(){
     $.getJSON('../data/people.json', function(data){
         properties = data
 
-        console.log("properties: ", properties)
-
-        console.log("image_holders: ", image_holders)
-
         image_holders.forEach(function(elem, index){
-            console.log("elem: ", $(elem))
             random_image_number = 0 + Math.floor(Math.random() * (properties.length - 1));
             random_image = properties[random_image_number]
             fade($(elem), 1000, random_image, 700)
@@ -36,7 +31,7 @@ setInterval(function(){
     random_image = properties[random_image_number]
 
     random_image_holder.find('img').fadeOut(700, function() {
-        $(this).attr('src', '../../images/' + random_image['image']);
+        $(this).attr('src', '../images/' + random_image['image']);
         $(this).load(function(){
             $(this).fadeIn(900);
         });
@@ -64,7 +59,7 @@ function fade(random_image_holder, fade_out_speed, random_image, fade_in_speed){
     random_image_holder.find('img').fadeOut(fade_out_speed, function() {
         
         $(this)
-            .attr('src', '../../images/' + random_image['image'])
+            .attr('src', '../images/' + random_image['image'])
             .attr('alt', random_image['name'])
             .attr('title', random_image['name']);
         $(this).load(function(){
