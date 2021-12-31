@@ -74,7 +74,6 @@ var cols,
     dragSrcEl = null
 
 function handleDragStart(e){
-    console.log('handleDragStart: ', e);
     $(this).css({'opacity': '0.4'})
 
     dragSrcEl = this
@@ -119,7 +118,6 @@ function handleDrop(e){
 }
 
 function handleDragEnd(e){
-    console.log('handleDragEnd: ', e);
     [].forEach.call(cols, function(col){
         $(col).css({'opacity': '1.0'}).removeClass('over')
     })
