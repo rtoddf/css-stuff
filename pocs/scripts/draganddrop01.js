@@ -45,8 +45,8 @@ var People = new function(){
             type: type
         })
 
-        $('#gallery #columns').html(template_people_compiled)
-        cols = $('#columns .column')
+        $('.gallery .columns').html(template_people_compiled)
+        cols = $('.columns .column')
     }
 }
 
@@ -54,7 +54,7 @@ var template_people_raw = '<% for (var i = 0; i < members.length; i++){ %> \
     <div class="column" draggable="true"> \
         <header><%= members[i].name %></header> \
         <div class="content"> \
-            <img src="../../images/politics/<%= members[i].photo %>" class="treatment" /> \
+            <img src="../images/drag-n-drop/<%= members[i].photo %>" class="treatment" /> \
             <p>&nbsp; \
                 <% if(members[i].twitter !== ""){ %> \
                     <span><a href="http://www.twitter.com/<%= members[i].twitter %>" target="_blank">Twitter</a></span> \
@@ -123,9 +123,9 @@ function handleDragEnd(e){
     })
 }
 
-$('#columns').on('dragstart', '.column', handleDragStart)
-$('#columns').on('dragenter', '.column', handleDragEnter)
-$('#columns').on('dragover', '.column', handleDragOver)
-$('#columns').on('dragleave', '.column', handleDragLeave)
-$('#columns').on('drop', '.column', handleDrop)
-$('#columns').on('dragstop', '.column', handleDragEnd)
+$('.columns').on('dragstart', '.column', handleDragStart)
+$('.columns').on('dragenter', '.column', handleDragEnter)
+$('.columns').on('dragover', '.column', handleDragOver)
+$('.columns').on('dragleave', '.column', handleDragLeave)
+$('.columns').on('drop', '.column', handleDrop)
+$('.columns').on('dragstop', '.column', handleDragEnd)
