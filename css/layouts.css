@@ -226,6 +226,10 @@ div {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
+[data-col="10"]  {
+  grid-template-columns: repeat(10, [col] 1fr);
+}
+
 [data-layout=checkerboard-313] {
   grid-template-columns: repeat(5, [col] 1fr);
   grid-template-rows: repeat(3, [row] auto);
