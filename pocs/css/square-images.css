@@ -1,0 +1,154 @@
+
+/* centered images */
+[data-image-layout="square"]:after {
+    content: "";
+    float: left;
+    display: block;
+    padding-top: 100%;
+}
+
+[data-image-layout="square"] .tile {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #222;
+    transition: all .3s ease;
+}
+
+[data-image-layout="square"] .tile.expanded {
+    height: 110%;
+    width: 180%;
+
+    -webkit-transform:scale(1.5);
+    transform: scale(1.5) translateX(-10%);
+
+    border: 1px solid #fff;
+    z-index: 10;
+}
+
+[data-image-layout="square"] .tile.expanded-square {
+    -webkit-transform:scale(1.5);
+    border: 1px solid #fff;
+    z-index: 10;
+}
+
+[data-image-layout="square"] .tile.expanded .image-holder img {
+    width: auto;
+}
+
+[data-image-layout="square"] .tile.expanded figure img {
+    width: auto;
+}
+
+[data-image-layout="square"] .tile.expanded .image-holder img:hover {
+    width: auto;
+    height: 102%;
+    max-width: 102%;
+    max-height: 102%;
+}
+
+
+[data-image-layout="square"] .tile.expanded figure img:hover {
+    width: auto;
+    height: 102%;
+    max-width: 102%;
+    max-height: 102%;
+}
+
+
+
+[data-image-layout="square"] .image-holder {
+    height: 100%;
+}
+
+[data-image-layout="square"] figure {
+    height: 100%;
+}
+
+[data-image-layout="square"] .image-holder img {
+    width: 102%;
+    height: 102%;
+    max-width: 102%;
+    max-height: 102%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all .6s ease;
+}
+
+[data-image-layout="square"] figure img {
+    width: 102%;
+    height: 102%;
+    max-width: 102%;
+    max-height: 102%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all .6s ease;
+}
+
+[data-image-layout="square"] figure img:hover {
+    width: 110%;
+    height: 110%;
+    max-width: 110%;
+    max-height: 110%;
+    margin: -5%;
+}
+
+.tile.square img {
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+
+    width: 102%;
+    height: 102%;
+    max-width: 102%;
+    max-height: 102%;
+
+    text-align: center;
+    cursor: pointer;
+    transform: translate(-50%, -25%);
+    transition: all .6s ease;
+}
+
+.fading-images [data-image-layout="square"] figure img {
+    transition: none;
+    cursor: auto;
+}
+
+.fading-images [data-image-layout="square"] figure img:hover {
+    width: 102%;
+    height: 102%;
+    max-width: 102%;
+    max-height: 102%;
+    margin: 0;
+}
+
+.content-holder {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* height: 35%; */
+    background: rgba(0,0,0,.5);
+    border-top: 1px solid rgba(255,255,255,.25);
+    color: #fff;
+}
+
+.content-holder h4 {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.content-holder a {
+    color: #fff;
+    font-weight: 400;
+}
