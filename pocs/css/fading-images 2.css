@@ -1,0 +1,20 @@
+.fading-images [data-image-layout="square"] figure img {
+    transition: none;
+    cursor: auto;
+}
+
+.fading-images [data-image-layout="square"] figure img:hover {
+    width: 102%;
+    height: 102%;
+    max-width: 102%;
+    max-height: 102%;
+    margin: 0;
+}
+
+#fading-images .flex-item[data-image-layout="square"] .tile {
+    border: 1px solid #666;
+}
+
+#fading-images .flex-item[data-image-layout="square"] .image-holder img {
+    transition: none;
+}
