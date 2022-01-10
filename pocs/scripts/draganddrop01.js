@@ -45,8 +45,8 @@ var People = new function(){
             type: type
         })
 
-        $('#gallery #columns').html(template_people_compiled)
-        cols = $('#columns .column')
+        $('.gallery .columns').html(template_people_compiled)
+        cols = $('.columns .column')
     }
 }
 
@@ -123,9 +123,9 @@ function handleDragEnd(e){
     })
 }
 
-$('#columns').on('dragstart', '.column', handleDragStart)
-$('#columns').on('dragenter', '.column', handleDragEnter)
-$('#columns').on('dragover', '.column', handleDragOver)
-$('#columns').on('dragleave', '.column', handleDragLeave)
-$('#columns').on('drop', '.column', handleDrop)
-$('#columns').on('dragstop', '.column', handleDragEnd)
+$('.columns').on('dragstart', '.column', handleDragStart)
+$('.columns').on('dragenter', '.column', handleDragEnter)
+$('.columns').on('dragover', '.column', handleDragOver)
+$('.columns').on('dragleave', '.column', handleDragLeave)
+$('.columns').on('drop', '.column', handleDrop)
+$('.columns').on('dragstop', '.column', handleDragEnd)
