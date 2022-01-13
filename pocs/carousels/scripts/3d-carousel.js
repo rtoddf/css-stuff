@@ -56,30 +56,34 @@ var init = function() {
 	var carousel = new Carousel3D( document.getElementById('carousel') ),
 		panelCountInput = document.getElementById('panel-count'),
 		axisButton = document.getElementById('toggle-axis'),
-		currentPanel = 1,
+		currentPanel = 1
 
-		navButtons = $('#navigation').find('button'),
+	onNavButtonClick = function(event){
+		$('#carousel figure').removeClass('current-panel')
 
-		onNavButtonClick = function(event){
-			$('#carousel figure').removeClass('current-panel')
+		var increment = parseInt( event.target.getAttribute('data-increment') );
+		carousel.rotation += carousel.theta * increment * -1;
+		carousel.transform();
 
-			var increment = parseInt( event.target.getAttribute('data-increment') );
-			carousel.rotation += carousel.theta * increment * -1;
-			carousel.transform();
+		if(currentPanel < carousel.panelCount){
+			// console.log('if: ', currentPanel)
+			currentPanel = currentPanel + increment;
+		} else if(currentPanel >= carousel.panelCount){
+			// console.log('else if: ', currentPanel)
+			currentPanel = 1;
+		}
 
-			if(currentPanel < carousel.panelCount){
-				// console.log('if: ', currentPanel)
-				currentPanel = currentPanel + increment;
-			} else if(currentPanel >= carousel.panelCount){
-				// console.log('else if: ', currentPanel)
-				currentPanel = 1;
-			}
-
-			$('#carousel figure:nth-child(' + currentPanel + ')').addClass('current-panel')
-			
-		};
+		$('#carousel figure:nth-child(' + currentPanel + ')').addClass('current-panel')
+		
+	};
 
 	$('#carousel figure:nth-child(' + currentPanel + ')').addClass('current-panel')
+
+	var navbuttons = document.getElementsByClassName("navigation");
+	
+	for (var i = 0; i < navbuttons.length; i++) {
+		navbuttons[i].addEventListener('click', onNavButtonClick, false);
+	}
 
 	// populate on startup
 	carousel.panelCount = parseInt(panelCountInput.getAttribute('value'), 10);
@@ -97,7 +101,8 @@ var init = function() {
 		carousel.modify();
 	});
 
-	navButtons.on('click', onNavButtonClick);
+	
+	// navButtons.on('click', onNavButtonClick);
 
 	// why doesn't this work - it's janky
 	// document.querySelector('#toggle-backface-visibility').addEventListener('click', function(){
