@@ -13,7 +13,7 @@ fetch('./data/slides01.json')
 				<figure>
 					<div class="image-holder">
 						<span class="filler">
-							<img src="` + n.image + `" alt="` + n.title + `">
+							<img src="./images/` + n.image + `" alt="` + n.title + `">
 						</span>
 					</div>
 					<div class="content-holder">
