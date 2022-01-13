@@ -1,6 +1,36 @@
 // https://desandro.github.io/3dtransforms/examples/carousel-02-dynamic.html
 // http://www.the-art-of-web.com/css/3d-transforms/
 
+var html = '';
+
+//set up
+fetch('./data/slides01.json')
+	.then(function (response) {
+		return response.json();
+	}).then(function (data) {
+		data.forEach(function(n){
+			html += `
+				<figure>
+					<div class="image-holder">
+						<span class="filler">
+							<img src="` + n.image + `" alt="` + n.title + `">
+						</span>
+					</div>
+					<div class="content-holder">
+						<h4>` + n.title + `</h4>
+					</div>
+				</figure>
+			`;
+		})
+
+		document.querySelector('#carousel').innerHTML = html;
+
+		init();
+	}).catch(function (err) {
+		// There was an error
+		console.warn('Something went wrong.', err);
+	});
+
 var transformProp = Modernizr.prefixed('transform');
 
 // console.log('transformProp: ', transformProp)
@@ -154,4 +184,4 @@ var init = function() {
 
 };
 
-window.addEventListener( 'DOMContentLoaded', init, false);
+// window.addEventListener( 'DOMContentLoaded', init, false);
