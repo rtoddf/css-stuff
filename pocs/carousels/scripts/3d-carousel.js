@@ -3,7 +3,7 @@
 
 var transformProp = Modernizr.prefixed('transform');
 
-console.log('transformProp: ', transformProp)
+// console.log('transformProp: ', transformProp)
 
 function Carousel3D (el) {
 	this.element = el;
@@ -54,8 +54,8 @@ Carousel3D.prototype.transform = function() {
 
 var init = function() {
 	var carousel = new Carousel3D( document.getElementById('carousel') ),
-		panelCountInput = $('#panel-count'),
-		axisButton = $('#toggle-axis'),
+		panelCountInput = document.getElementById('panel-count'),
+		axisButton = document.getElementById('toggle-axis'),
 		currentPanel = 1,
 
 		navButtons = $('#navigation').find('button'),
@@ -67,10 +67,6 @@ var init = function() {
 			carousel.rotation += carousel.theta * increment * -1;
 			carousel.transform();
 
-			// console.log('panelCount: ', carousel.panelCount)
-			// console.log('currentPanel: ', currentPanel)
-			// if(currentPanel < carousel.panelCount && currentPanel > 1){
-
 			if(currentPanel < carousel.panelCount){
 				// console.log('if: ', currentPanel)
 				currentPanel = currentPanel + increment;
@@ -78,15 +74,6 @@ var init = function() {
 				// console.log('else if: ', currentPanel)
 				currentPanel = 1;
 			}
-			// else if(currentPanel < 2){
-				
-			// 	currentPanel = carousel.panelCount;
-			// 	currentPanel = currentPanel + increment;
-
-			// 	console.log('last else: ', currentPanel)
-			// }
-
-			// console.log('currentPanel: ', currentPanel)
 
 			$('#carousel figure:nth-child(' + currentPanel + ')').addClass('current-panel')
 			
@@ -95,35 +82,38 @@ var init = function() {
 	$('#carousel figure:nth-child(' + currentPanel + ')').addClass('current-panel')
 
 	// populate on startup
-	carousel.panelCount = parseInt(panelCountInput.attr('value'), 10);
-	$('#num-panels').html(carousel.panelCount)
+	carousel.panelCount = parseInt(panelCountInput.getAttribute('value'), 10);
+	document.querySelector('#num-panels').innerHTML = carousel.panelCount;
 	carousel.modify();
 
-	axisButton.on('click', function(){
+	axisButton.addEventListener('click', function(){
 		carousel.isHorizontal = !carousel.isHorizontal;
 		carousel.modify();
 	});
 
-	$('#panel-count').on('change', function(event){
+	document.querySelector('#panel-count').addEventListener('change', function(){
 		carousel.panelCount = event.target.value;
-		$('#num-panels').html(carousel.panelCount)
+		document.querySelector('#num-panels').innerHTML = carousel.panelCount;
 		carousel.modify();
 	});
 
 	navButtons.on('click', onNavButtonClick);
 
+	// why doesn't this work - it's janky
+	// document.querySelector('#toggle-backface-visibility').addEventListener('click', function(){
+	// 	$('#carousel').toggleClass('panels-backface-invisible');
+	// });
+
 	$('#toggle-backface-visibility').on( 'click', function(){
 		$('#carousel').toggleClass('panels-backface-invisible');
 	});
 
-	setTimeout( function(){
-		$('body').addClass('ready');
-	}, 0);
+	setTimeout( function(){ $('body').addClass('ready'); }, 0);
 
-	$('#carousel').on('mousedown', handleTouchStart)
-	$('#carousel').on('mouseup', handleTouchEnd)
+	document.querySelector('#carousel').addEventListener('mousedown', handleTouchStart, false)
+	document.querySelector('#carousel').addEventListener('mouseup', handleTouchEnd, false)
 
-	$(document).keydown(function(e) {
+	document.addEventListener('keydown', function(e) {
 	    switch(e.which) {
 	        case 37: // left
 	        	increment = parseInt(-1);
@@ -159,20 +149,18 @@ var init = function() {
 		event.preventDefault();
 		xDown = e.clientX;
 		yDown = e.clientX;
-		$(document.body).css({'cursor' : '-webkit-grabbing'});
+		document.querySelector('body').style.cursor = '-webkit-grabbing';
 	};
 
 	function handleTouchEnd(e){
-		$(document.body).css({'cursor' : 'auto'});
+		document.querySelector('body').style.cursor = 'auto';
 		xUp = e.clientX;
 		yUp = e.clientX;
 		amountMoved = xDown - xUp
 
 		if(amountMoved > 0){
-			console.log('move left: ', amountMoved)
 			increment = parseInt(1);
 		} else {
-			console.log('move right: ', amountMoved)
 			increment = parseInt(-1);
 		}
 
