@@ -14,7 +14,7 @@
     z-index: 5;
 }
 
-.btn-rtodd {
+.btn {
     min-width: 250px;
     margin: 0 20px;
     padding: 10px;
@@ -31,12 +31,12 @@ label {
     font-weight: 300;
 }
 
-.btn-rtodd:hover {
+.btn:hover {
     background: rgba(22,22,22,.5);
     color: #fbefd9;
 }
 
-.btn-rtodd:active {
+.btn:active {
     border: none;
 }
 

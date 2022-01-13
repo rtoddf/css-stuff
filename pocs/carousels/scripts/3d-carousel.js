@@ -29,8 +29,6 @@ Carousel3D.prototype.modify = function() {
 		panel = this.element.children[i];
 		angle = this.theta * i;
 		panel.style.opacity = 1;
-		// panel.style.backgroundColor = 'hsla(' + angle + ', 100%, 50%, 0.8)';
-		// rotate panel, then push it out in 3D space
 		panel.style[ transformProp ] = this.rotateFn + '(' + angle + 'deg) translateZ(' + this.radius + 'px)';
 	}
 
@@ -59,8 +57,6 @@ var init = function() {
 		currentPanel = 1
 
 	onNavButtonClick = function(event){
-		$('#carousel figure').removeClass('current-panel')
-
 		var increment = parseInt( event.target.getAttribute('data-increment') );
 		carousel.rotation += carousel.theta * increment * -1;
 		carousel.transform();
@@ -72,12 +68,7 @@ var init = function() {
 			// console.log('else if: ', currentPanel)
 			currentPanel = 1;
 		}
-
-		$('#carousel figure:nth-child(' + currentPanel + ')').addClass('current-panel')
-		
 	};
-
-	$('#carousel figure:nth-child(' + currentPanel + ')').addClass('current-panel')
 
 	var navbuttons = document.getElementsByClassName("navigation");
 	
@@ -101,19 +92,7 @@ var init = function() {
 		carousel.modify();
 	});
 
-	
-	// navButtons.on('click', onNavButtonClick);
-
-	// why doesn't this work - it's janky
-	// document.querySelector('#toggle-backface-visibility').addEventListener('click', function(){
-	// 	$('#carousel').toggleClass('panels-backface-invisible');
-	// });
-
-	$('#toggle-backface-visibility').on( 'click', function(){
-		$('#carousel').toggleClass('panels-backface-invisible');
-	});
-
-	setTimeout( function(){ $('body').addClass('ready'); }, 0);
+	setTimeout( function(){ document.querySelector('body').classList.add('ready'); }, 0);
 
 	document.querySelector('#carousel').addEventListener('mousedown', handleTouchStart, false)
 	document.querySelector('#carousel').addEventListener('mouseup', handleTouchEnd, false)
