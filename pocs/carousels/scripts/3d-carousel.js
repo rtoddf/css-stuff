@@ -183,7 +183,6 @@ var init = function() {
 		carousel.rotation += carousel.theta * increment * -1;
 		carousel.transform();
 	}
-
 };
 
 // window.addEventListener( 'DOMContentLoaded', init, false);
