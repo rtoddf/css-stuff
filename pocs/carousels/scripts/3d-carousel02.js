@@ -24,6 +24,8 @@ fetch('./data/slides02.json')
 		})
 
 		document.querySelector('#carousel').innerHTML = html;
+		document.querySelector('#panel-count').setAttribute('max', data.length);
+		document.querySelector('#panel-count').setAttribute('value', data.length/2);
 
 		init();
 	}).catch(function (err) {
