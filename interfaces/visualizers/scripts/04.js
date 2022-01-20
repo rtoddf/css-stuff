@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var frequencyData = new Uint8Array(240);
 
-    console.log('frequencyData: ', frequencyData);
+    // console.log('frequencyData: ', frequencyData);
 
     var artist = $(audioElement).attr('data-artist'),
         song = $(audioElement).attr('data-song');
