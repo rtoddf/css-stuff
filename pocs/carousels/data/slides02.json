@@ -2,101 +2,101 @@
     {
         "id": 0,
         "title": "Shaping Sound", 
-        "image": "performance-shaping-sound01.jpg"
+        "image": "shaping-sound01.jpg"
     },
     {
         "id": 1,
         "title": "Xavier Dolan", 
-        "image": "personality-xavier-dolan.jpg"
+        "image": "xavier-dolan.jpg"
     },
     {
         "id": 2,
         "title": "Joseph Altuzarra", 
-        "image": "personality-joseph-altuzarra.jpg"
+        "image": "joseph-altuzarra.jpg"
     },
     {
         "id": 3,
         "title": "Gus Kenworthy", 
-        "image": "sports-gus-kenworthy.jpg"
+        "image": "gus-kenworthy.jpg"
     },
     {
         "id": 4,
         "title": "Nyle DiMarco", 
-        "image": "personality-nyle-dimarco.jpg"
+        "image": "nyle-dimarco.jpg"
     },
     {
         "id": 5,
         "title": "Max Emerson", 
-        "image": "personality-max-emerson.jpg"
+        "image": "max-emerson.jpg"
     },
     {
         "id": 6,
         "title": "Matt Bomer", 
-        "image": "personality-matt-bomer.jpg"
+        "image": "matt-bomer.jpg"
     },
     {
         "id": 7,
         "title": "Nico Tortorella", 
-        "image": "personality-nico-tortorella.jpg"
+        "image": "nico-tortorella.jpg"
     },
     {
         "id": 8,
         "title": "Colton Haynes", 
-        "image": "personality-colton-haynes.jpg"
+        "image": "colton-haynes.jpg"
     },
     {
         "id": 9,
         "title": "Eli Lieb", 
-        "image": "music-eli-lieb.jpg"
+        "image": "eli-lieb.jpg"
     },
     {
         "id": 10,
         "title": "Lance Bass", 
-        "image": "personality-lance-bass.jpg"
+        "image": "lance-bass.jpg"
     },
     {
         "id": 11,
         "title": "Ricky Martin", 
-        "image": "music-ricky-martin.jpg"
+        "image": "ricky-martin.jpg"
     },
     {
         "id": 12,
         "title": "Kyle Dean Massey", 
-        "image": "personality-kyle-dean-massey.jpg"
+        "image": "kyle-dean-massey.jpg"
     },
     {
         "id": 13,
         "title": "Matt Doyle", 
-        "image": "personality-matt-doyle.jpg"
+        "image": "matt-doyle.jpg"
     },
     {
         "id": 14,
         "title": "Wentworth Miller", 
-        "image": "personality-wentworth-miller.jpg"
+        "image": "wentworth-miller.jpg"
     },
     {
         "id": 15,
         "title": "Michael Willett", 
-        "image": "personality-michael-j-willett.jpg"
+        "image": "michael-j-willett.jpg"
     },
     {
         "id": 16,
         "title": "Matt Dallas", 
-        "image": "personality-matt-dallas.jpg"
+        "image": "matt-dallas.jpg"
     },
     {
         "id": 17,
         "title": "Tom Daley", 
-        "image": "sports-tom-daley.jpg"
+        "image": "tom-daley.jpg"
     },
     {
         "id": 18,
-        "title": "Rhodes Bro", 
-        "image": "youtube-aaron-rhodes.jpg"
+        "title": "Aaron Rhodes", 
+        "image": "aaron-rhodes.jpg"
     },
     {
         "id": 18,
         "title": "Connor Franta", 
-        "image": "youtube-connor-franta.jpg"
+        "image": "connor-franta.jpg"
     }
 ]
