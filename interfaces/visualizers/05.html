@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- for now -->
+        <link rel="shortcut icon" href="#">
+        <title>Music Visualizer</title>
+        <link href="./css/base.css" rel="stylesheet" />
+        <link href="./css/layouts.css" rel="stylesheet" />
+        <link href="./css/visualizer.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="grid">
+                <h2>Audio Visualizer IIIb</h2>
+                <article class="listen-live-player">
+                    
+                    <div class="display">
+                        <div id="wave"></div>
+                    </div>
+                    <div class="player-controls">
+                        <button class="o-play-btn">
+                            <i class="o-play-btn__icon">
+                              <div class="o-play-btn__mask"></div>
+                            </i>
+                        </button>
+
+                        <div class="player-volume-controls">
+                            <div class="volume-controls">
+                                <div class="control">
+                                    <input type="range" id="volume" value="50" max="100" min="0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <audio crossOrigin="anonymous" id="audioElement" src="https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music6/v4/e7/fb/fc/e7fbfc84-cc72-258e-d68f-2d563bfe2f9a/mzaf_288499283457732674.plus.aac.p.m4a" type="audio/mpeg" preload="auto" data-artist="Rihanna" data-song="Shut Up and Drive"></audio>
+
+                </article>
+
+                <article id="track"></article>
+            </div>
+        </div>
+    </body>
+
+    <script src="./scripts/libs/jquery.min.js"></script>
+    <script src="./scripts/libs/d3.min.js"></script>
+    <script src="./scripts/libs/underscore-min.js"></script>
+    <script src="./scripts/underscore_mixins.js"></script>
+    <script src="./scripts/controls.js"></script>
+    <script src="./scripts/05.js"></script>
+</html>
