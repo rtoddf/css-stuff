@@ -1,3 +1,23 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  color: #222;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-size: 0.875rem;
+}
+
 @keyframes rotate-x {
   /* from is assumed */
   to {
