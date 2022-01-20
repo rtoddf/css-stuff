@@ -25,7 +25,7 @@ function getPhoto(name, type){
 var People = new function(){
     this.getPeople = function(p){
         var people = []
-        $.getJSON('../data/' + p + '.json', function(data){
+        $.getJSON('./data/' + p + '.json', function(data){
             data.forEach(function(pers, i){
                 var person = new Person(pers)
                 people.push(person)
@@ -54,7 +54,7 @@ var template_people_raw = '<% for (var i = 0; i < members.length; i++){ %> \
     <div class="column" draggable="true"> \
         <header><%= members[i].name %></header> \
         <div class="content"> \
-            <img src="../images/drag-n-drop/<%= members[i].photo %>" class="treatment" /> \
+            <img src="./images/<%= members[i].photo %>" class="treatment" /> \
             <p>&nbsp; \
                 <% if(members[i].twitter !== ""){ %> \
                     <span><a href="http://www.twitter.com/<%= members[i].twitter %>" target="_blank">Twitter</a></span> \
