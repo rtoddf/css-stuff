@@ -1,0 +1,112 @@
+#timeline ul li {
+    display: grid;
+    grid-template-columns: repeat(2, [col] 1fr);
+    border: none;
+}
+
+i:hover {
+    opacity: 1;
+}
+
+.timeStamp {
+    margin-bottom: 0;
+    white-space: nowrap;
+    color: #999;
+    font-size: 12px;
+}
+
+#previous {
+    bottom: 0;
+}
+
+#next {
+    top: 0;
+}
+
+#navigation {
+    position: relative;
+    width: 5%;
+    height: 100%;
+    float: right;
+    margin-left: 10px;
+}
+
+i {
+    position: absolute;
+    font-size: 24px !important;
+    cursor: pointer;
+    color: #09287c;
+    opacity: .7;
+    transition: all .3s ease;
+}
+
+.carousel-container {
+    overflow: hidden;
+    height: 300px;
+    position: relative;
+    -webkit-perspective: 1100px;
+         -moz-perspective: 1100px;
+             -o-perspective: 1100px;
+                    perspective: 1100px;
+}
+
+#carousel {
+    width: 95%;
+    height: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+             -o-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+}
+
+.ready #carousel {
+    -webkit-transition: -webkit-transform 1s;
+         -moz-transition: -moz-transform 1s;
+             -o-transition: -o-transform 1s;
+                    transition: transform 1s;
+}
+
+#carousel.panels-backface-invisible li {
+    -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+             -o-backface-visibility: hidden;
+                    backface-visibility: hidden;
+}
+
+#carousel li {
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    
+}
+
+.ready #carousel li {
+    -webkit-transition: opacity 1s, -webkit-transform 1s;
+         -moz-transition: opacity 1s, -moz-transform 1s;
+             -o-transition: opacity 1s, -o-transform 1s;
+                    transition: opacity 1s, transform 1s;
+}
+
+figure {
+    align-self: center;
+    margin: 0;
+    border: 1px solid #222;
+    box-shadow: 0 2px 4px 0 rgba(149, 149, 149, 0.5);
+    overflow: hidden;
+}
+
+figure img {
+    border: none;
+}
+
+.content-holder {
+    align-self: center;
+    position: relative;
+    margin: 0;
+    padding: 5px 20px;
+    background: transparent;
+    color: #333;
+    font-weight: 300;
+}
