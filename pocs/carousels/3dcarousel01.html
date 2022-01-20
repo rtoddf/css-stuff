@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- for now -->
+        <link rel="shortcut icon" href="#">
+		<title>CSS Stuff</title>
+		
+		<link href="../../css/base-new.css" rel="stylesheet" />
+		<link href="../../css/layouts.css" rel="stylesheet" />
+		<link href="./css/3d-carousel.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="grid">
+				<h2>3D Carousel</h2>
+				<article>
+					<h3>Navigation:</h3>
+					<p>To advance the carousel: Use the arrow keys on your keyboard, the Previous and Next buttons, or click and drag your mouse to the left or right.</p>
+					<p>To add or remove items from the carousel: Drag the slider under the carousel.</p>
+					<p>To change the axis of the carousel: Toggle the Toggle Axis button.</p>
+
+					<div id="carousel-setup"></div>
+				</article>
+			</div>
+			<div class="grid">
+				<article>
+					<section class="carousel-container">
+						<div id="carousel">
+							
+						</div>
+					</section>
+
+					<section id="options">
+						<div class="form-group toggle-count">
+							<input type="range" id="panel-count" min="3" />
+							<label for="panel-count"><span id="num-panels"></span> Panels</label>
+						</div>
+						<div id="navigation" class="form-group">
+							<button id="previous" data-increment="-1" class="navigation btn">Previous</button>
+							<button id="next" data-increment="1" class="navigation btn">Next</button>
+						</div>
+						<div id="toggle" class="form-group">
+							<button id="toggle-axis" class="btn">
+								<i class="fa fa-toggle-on" aria-hidden="true"></i>&nbsp;&nbsp;Toggle Axis
+							</button>
+						</div>
+					</section>
+				</article>
+			</div>
+		</div>
+
+		<script src="./scripts/libs/modernizr.js"></script>
+		<script src="./scripts/3d-carousel.js"></script>
+	</body>
+</html>

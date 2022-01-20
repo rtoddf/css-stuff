@@ -1,0 +1,102 @@
+[
+    {
+        "id": 0,
+        "title": "Shaping Sound", 
+        "image": "shaping-sound01.jpg"
+    },
+    {
+        "id": 1,
+        "title": "Xavier Dolan", 
+        "image": "xavier-dolan.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Joseph Altuzarra", 
+        "image": "joseph-altuzarra.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Gus Kenworthy", 
+        "image": "gus-kenworthy.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Nyle DiMarco", 
+        "image": "nyle-dimarco.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Max Emerson", 
+        "image": "max-emerson.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Matt Bomer", 
+        "image": "matt-bomer.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Nico Tortorella", 
+        "image": "nico-tortorella.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Colton Haynes", 
+        "image": "colton-haynes.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Eli Lieb", 
+        "image": "eli-lieb.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Lance Bass", 
+        "image": "lance-bass.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Ricky Martin", 
+        "image": "ricky-martin.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Kyle Dean Massey", 
+        "image": "kyle-dean-massey.jpg"
+    },
+    {
+        "id": 13,
+        "title": "Matt Doyle", 
+        "image": "matt-doyle.jpg"
+    },
+    {
+        "id": 14,
+        "title": "Wentworth Miller", 
+        "image": "wentworth-miller.jpg"
+    },
+    {
+        "id": 15,
+        "title": "Michael Willett", 
+        "image": "michael-j-willett.jpg"
+    },
+    {
+        "id": 16,
+        "title": "Matt Dallas", 
+        "image": "matt-dallas.jpg"
+    },
+    {
+        "id": 17,
+        "title": "Tom Daley", 
+        "image": "tom-daley.jpg"
+    },
+    {
+        "id": 18,
+        "title": "Aaron Rhodes", 
+        "image": "aaron-rhodes.jpg"
+    },
+    {
+        "id": 18,
+        "title": "Connor Franta", 
+        "image": "connor-franta.jpg"
+    }
+]

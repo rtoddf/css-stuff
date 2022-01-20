@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- for now -->
+        <link rel="shortcut icon" href="#">
+        <title>CSS Stuff</title>
+
+        <link href="../../css/base-new.css" rel="stylesheet" />
+        <link href="../../css/layouts.css" rel="stylesheet" />
+        <link href="./css/drag-drop01.css" rel="stylesheet">
+    </head>
+
+    <body class="">
+        <div class="container">
+            <div class="grid">
+                <h3>Drag &amp; Drop API</h3>
+                <p>A simple project to show the feaures of the HTML5 drag and drop api.</p>
+                <p>You can drag and drop any box over another to have them switch locations in the grid. You can also choose other categories to see the people/data in that category. Currently this a list is of politicians. The list is not complete, and I'll be adding more categories to it in the future.</p>
+                <p>I'm working to get the list to use local storage to remember the order that you last left it when you come back.</p>
+
+                <div class="gallery dragndrop">
+                    <div class="columns"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./scripts/libs/jquery.min.js"></script>
+        <script src="./scripts/libs/underscore-min.js"></script>
+        <script src="./scripts/draganddrop01.js"></script>
+    </body>
+</html>

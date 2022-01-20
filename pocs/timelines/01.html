@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- for now -->
+        <link rel="shortcut icon" href="#">
+        <title>CSS Stuff</title>
+
+        <link href="../../css/base-new.css" rel="stylesheet" />
+        <link href="../../css/layouts.css" rel="stylesheet" />
+		<link href="./css/timeline01.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	</head>
+
+	<body id="timeline">
+		<div class="container">
+			<div class="grid">
+				<h2>Timeline One</h2>
+            </div>
+			<div class="grid" data-col="2">
+				<article>
+					<div class="carousel-container">
+						<ul id="carousel" class="panels-backface-invisible">
+							<li>
+								<figure>
+									<span class="filler">
+										<img src="./images/bruno-mars.jpg" alt="Bruno Mars" title="Bruno Mars">
+									</span>
+								</figure>
+								<div class="content-holder">
+									<h4>Bruno Mars</h4>
+									<p class="timeStamp">2014</p>
+									<p>Bruno Mars is an American singer-songwriter, multi-instrumentalist, record producer, and choreographer. Born and raised in Honolulu, Hawaii, by a family of musicians, Mars began making music at a young age and performed in various musical venues in his hometown throughout his childhood.</p>
+								</div>
+							</li>
+							<li>
+								<figure>
+									<img src="./images/adele.jpg" alt="Adele" title="Adele">
+								</figure>
+								<div class="content-holder">
+									<h4>Adele</h4>
+									<p class="timeStamp">2010</p>
+									<p>AAdele Laurie Blue Adkins MBE is an English singer-songwriter. After graduating from the BRIT School for Performing Arts and Technology in 2006, Adele was given a recording contract by XL Recordings after a friend posted her demo on Myspace the same year.</p>
+								</div>
+							</li>
+							<li>
+								<figure>
+									<img src="./images/usher.jpg" alt="Usher" title="Usher">
+								</figure>
+								<div class="content-holder">
+									<h4>Usher</h4>
+									<p class="timeStamp">2004</p>
+									<p>Usher Raymond IV is an American singer, songwriter, dancer, and actor. Born in Dallas, Texas but raised and lived in Chattanooga, Tennessee until moving to Atlanta, Georgia. His mother put him in local singing competitions, before catching the attention of a music A&amp;R from LaFace Records.</p>
+								</div>
+							</li>
+							<li>
+								<figure>
+									<img src="./images/beyonce.jpg" alt="Beyoncé" title="Beyoncé">
+								</figure>
+								<div class="content-holder">
+									<h4>Beyoncé</h4>
+									<p class="timeStamp">2000</p>
+									<p>Beyoncé Giselle Knowles-Carter is an American singer, songwriter and actress. Born and raised in Houston, Texas, she performed in various singing and dancing competitions as a child and rose to fame in the late 1990s as lead singer of R&amp;B girl-group Destiny's Child.</p>
+								</div>
+							</li>
+						</ul>
+						<div id="navigation">
+							<i id="next" data-increment="1" class="fa fa-arrow-up" aria-hidden="true"></i>
+							<i id="previous" data-increment="-1" class="fa fa-arrow-down" aria-hidden="true"></i>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+
+		<script src="./scripts/libs/jquery.min.js"></script>
+		<script src="./scripts/libs/modernizr.js"></script>
+		<script src="./scripts/timeline01.js"></script>
+	</body>
+</html>

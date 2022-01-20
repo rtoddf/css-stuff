@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- for now -->
+        <link rel="shortcut icon" href="#">
+        <title>CSS Stuff</title>
+
+        <link href="../../css/base-new.css" rel="stylesheet" />
+        <link href="../../css/layouts.css" rel="stylesheet" />
+        <link href="./css/poc-draganddrop02.css" rel="stylesheet">
+    </head>
+
+    <body id="dragndrop">
+        <div class="container">
+            <h3>Drag &amp; Drop API</h3>
+            <div id="columns" class="grid">
+                <article class="column" draggable="true">
+                    <div data-id="levine">
+                        <img src="./images/adam-levine.jpg" />
+                    </div>
+                </article>
+                <article class="column" draggable="true">
+                    <div data-id="etheridge">
+                        <img src="./images/melissa-etheridge.jpg" />
+                    </div>
+                </article>
+                <article class="column" draggable="true">
+                    <div data-id="shaping">
+                        <img src="./images/shaping-sound.jpg" />
+                    </div>
+                </article>
+                <article class="column" draggable="true">
+                    <div data-id="dolan">
+                        <img src="./images/xavier-dolan.jpg" />
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <script src="./scripts/libs/jquery.min.js"></script>
+        <script src="./scripts/draganddrop02.js"></script>
+    </body>
+</html>
