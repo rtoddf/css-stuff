@@ -55,3 +55,7 @@
 .lyrics {
     margin: 20px 0;
 }
+
+.player-controls {
+    display: none;
+}

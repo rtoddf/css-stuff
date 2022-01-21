@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // console.log('frequencyData: ', frequencyData);
 
-    var artist = $(audioElement).attr('data-artist'),
-        song = $(audioElement).attr('data-song');
+    var artist = audioElement.getAttribute('data-artist'),
+        song = audioElement.getAttribute('data-song');
     
     getItunesData(artist, song);
 
@@ -44,8 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .attr({
             'transform': 'translate(' + margins.left + ',' + margins.top + ')'
         })
-
-    aspect = width / height
 
     // Create our initial D3 chart.
     vis_group.selectAll('rect')
@@ -104,38 +102,42 @@ function getItunesData(artist, track_name){
     var baseSearchString = 'http://itunes.apple.com/search'
 
     var tracks = [];
-    tracks.length = 0
+    tracks.length = 0;
     var searchTerm = (artist + ' ' + track_name).replace(/ /g, '+');
-    var searchString = baseSearchString + '?term=' + searchTerm + '&entity=musicTrack&callback=?'
+    var searchString = baseSearchString + '?term=' + searchTerm + '&entity=musicTrack'
+    var html = '';
 
-    $.getJSON(searchString, function(data){
-        (data.results).forEach(function(track, i){
-            console.log("track_name: ", track_name)
+    fetch(searchString)
+        .then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            (data.results).forEach(function(track, i){
+                if(track.artistName.toLowerCase() == artist.toLowerCase()){
+                    tracks.push(track)
+                }
+            })
 
-            if ($(data.results).get(i).artistName.toLowerCase() == artist.toLowerCase() && $(data.results).get(i).kind === 'song'){
-                tracks.push(track)
-                artist_name = $(data.results).get(i).artistName;
-            }
-        })
+            html += `
+                <article class="jukebox-card"> 
+                    <div class="inner">
+                        <div id="play" class="song-artwork">
+                            <img src="` + tracks[0].artworkUrl100 + `" />
+                        </div>
+                        <div class="song-info">
+                            <p class="artist-name">` + tracks[0].artistName + `</p>
+                            <p class="track-name">` + tracks[0].trackName + `</p>
+                            <p class="genre">` + new Date(tracks[0].releaseDate).getFullYear() + ` -  ` + tracks[0].primaryGenreName + `</p>
+                        </div>
+                    </div>
+                </article>'
+            `;
 
-        var template_compiled = _.template(template_raw, {
-            data: tracks[0]
-        })
-        $('#track').html(template_compiled)
-        $('.player-controls').show();
-        $('#audioElement').attr('src', tracks[0].previewUrl)
-    })
+            document.querySelector('#track').innerHTML = html;
+            document.querySelector('.player-controls').style.display = 'block';
+            audioElement.setAttribute('src', tracks[0].previewUrl)
+
+        }).catch(function (err) {
+            // There was an error
+            console.warn('Something went wrong.', err);
+        });
 }
-
-var template_raw = '<article class="jukebox-card"> \
-    <div class="inner"> \
-        <div id="play" class="song-artwork"> \
-            <img src="<%= data.artworkUrl100 %>" /> \
-        </div> \
-        <div class="song-info"> \
-            <p class="artist-name"><%= data.artistName %></p> \
-            <p class="track-name"><%= data.trackName %></p> \
-            <p class="genre"><%= new Date(data.releaseDate).getFullYear() %>  - <%= data.primaryGenreName %></p> \
-        </div> \
-    </div> \
-</article>'
