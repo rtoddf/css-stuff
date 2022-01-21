@@ -105,3 +105,64 @@ button.o-play-btn:hover {
 .o-play-btn--playing .o-play-btn__mask:after {
     transform: rotate(0);
 }
+
+/* begin jukebox card */
+.jukebox-card {
+    color: rgba(0,0,0,1);
+    background: white;
+    border: 1px solid #666;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+}
+
+.jukebox-card .inner {
+    display: flex;
+    background: rgba(221,133,253,.5);
+}
+
+.jukebox-card .song-artwork {
+    height: 100px;
+}
+
+.jukebox-card .song-artwork img {
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+}
+
+.jukebox-card .song-info {
+    text-align: center;
+    flex: 1 1 0;
+}
+
+.jukebox-card .song-info p {
+    margin: 0;
+    padding: .25rem 0 .25rem;
+    font-size: 14px;
+}
+
+.jukebox-card .song-info p:nth-child(odd) {
+    background: rgba(221,133,253,1);
+}
+
+
+#song_list h3 {
+    margin-top: 0;
+    color: #fff;
+    text-align: center;
+    border: none;
+}
+
+#song_list .jukebox-card .song-artwork {
+    height: 225px;
+}
+
+#song_list .jukebox-card img {
+    width: 100%;
+}
+
+.lyrics {
+    margin: 20px 0;
+}
+
+.player-controls {
+    display: none;
+}

@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // var frequencyData = new Uint8Array(analyser.frequencyBinCount);
     var frequencyData = new Uint8Array(240);
 
-    console.log('frequencyData: ', frequencyData)
+    // console.log('frequencyData: ', frequencyData)
 
     // One-liner to resume playback when user interacted with the page.
     document.querySelector('.o-play-btn').addEventListener('click', function() {
@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Playback resumed successfully');
         });
     });
+
+    document.querySelector('.player-controls').style.display = 'block';
 
     vis = d3.select('#wave').append('svg')
         .attr({
@@ -38,8 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .attr({
             'transform': 'translate(' + margins.left + ',' + margins.top + ')'
         })
-
-    // aspect = chart_container.width() / chart_container.height()
 
     // continuously loop and update chart with frequency data.
     function renderChart() {

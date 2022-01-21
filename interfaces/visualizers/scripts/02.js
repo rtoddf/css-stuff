@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //var frequencyData = new Uint8Array(analyser.frequencyBinCount);
     var frequencyData = new Uint8Array(480);
 
-    console.log('frequencyData: ', frequencyData)
+    // console.log('frequencyData: ', frequencyData)
 
     // One-liner to resume playback when user interacted with the page.
     // https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaudio
@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // console.log('Playback resumed successfully');
         });
     });
+
+    document.querySelector('.player-controls').style.display = 'block';
 
     vis = d3.select('#wave').append('svg')
         .attr({
@@ -40,8 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .attr({
             'transform': 'translate(' + margins.left + ',' + margins.top + ')'
         })
-
-    aspect = width / height
 
     // Create our initial D3 chart.
     vis_group.selectAll('rect')
