@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- for now -->
+        <link rel="shortcut icon" href="#">
+		<title>CSS Stuff</title>
+
+		<link href="../../css/base-new.css" rel="stylesheet" />
+		<link href="../../css/layouts.css" rel="stylesheet" />
+		<link href="../../css/displays.css" rel="stylesheet" />
+		<link href="./css/itunes.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="grid">
+				<h2>iTunes Audio Samples</h2>
+				<article class="form">
+					<label for="artist">Artist/Band Name: </label>
+					<input type="text" id="artist" placeholder="Artist/Band Name" value="Charlie Puth">
+					<label for="song">Song Title: </label>
+				
+					<input type="text" id="track_name" placeholder="Song Title" value="Light Switch">
+					<button id="button">Submit</button>
+				</article>
+
+				<div id="samples" class="grid" data-col="4"></div>
+			</div>
+		</div>
+
+		<script src="./scripts/itunes_audio_samples.js"></script>
+	</body>
+</html>

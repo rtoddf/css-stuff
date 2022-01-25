@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- for now -->
+        <link rel="shortcut icon" href="#">
+		<title>CSS Stuff</title>
+
+		<link href="../../css/base-new.css" rel="stylesheet" />
+		<link href="../../css/layouts.css" rel="stylesheet" />
+		<link href="../../css/displays.css" rel="stylesheet" />
+		<link href="./css/itunes.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="grid">
+				<h2>Searching for an Artist - More Info</h2>
+				<article class="form">
+					<label for="artist">Artist/Band Name: </label>
+					<input type="text" id="artist" placeholder="Artist/Band Name" value="Charlie Puth">
+					<button id="button">Search</button>
+				</article>
+				<div id="tracks" class="grid" data-col="5"></div>
+			</div>
+
+			<article>
+				<p>The javascript will construct a search string with that artist and return the first eight tracks from that artist - if it finds any results. Type in an artist's name into the search box and click Submit.</p>
+				<ul>
+					<li><strong>artistName</strong> - The artist or group's name.</li>
+					<li><strong>artistId</strong> - The id that can be used for other searches, such as albums.</li>
+					<li><strong>artistViewUrl</strong> - The url for a bio and list of media by that artist.</li>
+					<li><strong>trackName</strong> - The track name of the song the search returned.</li>
+					<li><strong>trackId</strong> - The id of the above track that can be used in other searched.</li>
+					<li><strong>releaseDate</strong> - The unicode formatted date of the release of the track above. (Some extra work has been done to extract just the year)</li>
+					<li><strong>kind</strong> - The media kind of the track above. You can use this to narrow down your search.</li>
+					<li><strong>trackPrice</strong> - The price of the track above.</li>
+					<li><strong>trackTimeMillis</strong> - The length (in milliseconds) of the track above.</li>
+					<li><strong>previewUrl</strong> - the url of a preview of the track above.</li>
+					<li><strong>artworkUrl100</strong> - the url of the artwork for that track/artist. We'll use this later in an example to get other sizes.</li>
+					<li><strong>primaryGenreName</strong> - The primary genre of the artist.</li>
+				</ul>
+			</article>
+		</div>
+
+		<script src="./scripts/itunes_artist_info.js"></script>
+	</body>
+</html>
