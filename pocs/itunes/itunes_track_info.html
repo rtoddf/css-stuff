@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- for now -->
+        <link rel="shortcut icon" href="#">
+		<title>CSS Stuff</title>
+
+		<link href="../../css/base-new.css" rel="stylesheet" />
+		<link href="../../css/layouts.css" rel="stylesheet" />
+		<link href="../../css/displays.css" rel="stylesheet" />
+		<link href="./css/itunes.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="grid">
+				<h2>Searching for Track Title</h2>
+				<article>
+					<p>We're looking for all the albums that contain that track. The javascript will construct a search string with the track title, return the album collections based on the search
+						parameters, and display the artist name, collection name, image, primary genre, and year of release.</p>
+					<p>Type a track title into the search box and click Search.</p>
+				</article>
+				<article class="form">
+					<input type="text" id="track_name" placeholder="Track title" value="We Don't Talk About Bruno">
+					<button id="button">Search</button>
+				</article>
+
+                <div id="tracks" class="grid" data-col="4"></div>
+			</div>
+		</div>
+
+		<script src="./scripts/itunes_track_info.js"></script>
+	</body>
+</html>

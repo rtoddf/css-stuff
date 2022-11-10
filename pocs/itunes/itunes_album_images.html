@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- for now -->
+        <link rel="shortcut icon" href="#">
+		<title>CSS Stuff</title>
+
+		<link href="../../css/base-new.css" rel="stylesheet" />
+		<link href="../../css/layouts.css" rel="stylesheet" />
+		<link href="../../css/displays.css" rel="stylesheet" />
+		<link href="./css/itunes.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="grid">
+				<h2>Search Example - Different Size Images</h2>
+				<article class="form">
+					<label for="artist">Artist/Band Name: </label>
+					<input type="text" id="artist" placeholder="Artist/Band Name" value="Charlie Puth">
+					<label for="song">Song Title: </label>
+				
+					<input type="text" id="track_name" placeholder="Song Title" value="Marvin Gaye">
+					<button id="button">Search</button>
+				</article>
+				<!-- <p class="results-summary">Results for <span class="track-title"></span> by <span class="track-artist"></span></p> -->
+
+				<div id="track-images" class="grid" data-col="2"></div>
+			</div>
+
+			<div class="grid">
+				<p>In previous examples, we saw that there was a json node that gave us a url for album artwork. But what if you wanted
+					an image that was larger than 100px x 100px? You can use css and stretch the image to 100% of it's containing div, but
+					that only works up to a certain size before the image starts to look like crap.</p>
+				<p>We can simply use string replacement to get a larger size. Here's the url that is returned when we ask for <strong>artworkUrl100</strong>:</p>
+				<pre>http:http://a1472.phobos.apple.com/us/r30/Music/v4/2e/b7/9c/2eb79c2b-d51d-8cd6-c85a-ad338a1662a4/Cover.100x100-75.jpg</pre>
+				<p>The image size is at the end of the url:</p>
+				<pre>100x100-75.jpg</pre>
+				<p>I only know of three image sizes: 100x100, 225x225, and 600x600. There may be others, but these are the only three
+					sizes I've ever needed. Just use a string replace to change the image size in the url.</p>
+				<p>The javascript will construct a search string with that artist and track title, return the album collections based
+					on the search parameters, and display the artist name, track title, as well as the three image sizes with the album
+					collection name and year of release.</p>
+				<p>Type in an artist's name and track title into the search boxes and click Search.</p>
+			</div>
+		</div>
+
+		<script src="./scripts/itunes_album_images.js"></script>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "title": "Shaping Sound", 
+        "image": "performance-shaping-sound02.jpg"
+    },
+    {
+        "id": 1,
+        "title": "Josh Hutcherson", 
+        "image": "personality-josh-hutcherson.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Ellen Page", 
+        "image": "personality-ellen-page.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Nick Jonas", 
+        "image": "personality-nick-jonas.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Brendon Urie", 
+        "image": "music-brendon-urie.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Daniel Radcliffe", 
+        "image": "personality-daniel-radcliffe.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Darren Criss", 
+        "image": "personality-darren-criss.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Adam Levine", 
+        "image": "music-adam-levine.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Travis Wall", 
+        "image": "personality-travis-wall.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Gideon Glick", 
+        "image": "personality-gideon-glick.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Jordan Doww", 
+        "image": "youtube-jordan-doww.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Gillian Anderson", 
+        "image": "personality-gillian-anderson.jpg"
+    }
+]

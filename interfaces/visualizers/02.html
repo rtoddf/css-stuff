@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- for now -->
+        <link rel="shortcut icon" href="#">
+        <title>Music Visualizer</title>
+        <link href="./css/base.css" rel="stylesheet" />
+        <link href="./css/layouts.css" rel="stylesheet" />
+        <link href="./css/visualizer.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="grid">
+                <h2>Audio Visualizer II</h2>
+
+                <div class="listen-live-player">
+                    <div class="player-controls">
+                        <button class="o-play-btn">
+                            <i class="o-play-btn__icon">
+                              <div class="o-play-btn__mask"></div>
+                            </i>
+                        </button>
+
+                        <div class="player-volume-controls">
+                            <div class="volume-controls">
+                                <div class="control">
+                                    <input type="range" id="volume" value="50" max="100" min="0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <audio crossOrigin="anonymous" id="audioElement" src="audio/01 The Beat Goes On.m4a" type="audio/mpeg" preload="auto"></audio>
+                </div>
+
+                <div class="display">
+                    <div id="wave"></div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+
+    <script src="./scripts/libs/d3.min.js"></script>
+    <script src="./scripts/controls.js"></script>
+    <script src="./scripts/02.js"></script>
+</html>
