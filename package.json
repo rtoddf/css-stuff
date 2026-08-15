@@ -1,0 +1,26 @@
+{
+  "name": "css-stuff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "javascript-functions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtoddf/css-stuff.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rtoddf/css-stuff/issues"
+  },
+  "homepage": "https://github.com/rtoddf/css-stuff#readme",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "serve-static": "^2.2.1"
+  }
+}
